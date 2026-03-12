@@ -1,43 +1,58 @@
-// Counter Animation for Impact Section
+/* =========================================
+   M.R WELFARE FOUNDATION - MAIN SCRIPT
+========================================= */
+
+/* ====================================
+   1. Counter Animation for Impact Section
+==================================== */
 const counters = document.querySelectorAll('.counter');
 const speed = 200; // The lower the slower
 
-counters.forEach(counter => {
-    const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        
-        // Calculate increment
-        const inc = target / speed;
+// সেফটি চেক: যদি পেজে কাউন্টার থাকে, তবেই এই কোড রান করবে
+if (counters.length > 0) {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    // আগের প্লাস (+) চিহ্ন থাকলে সেটি সরিয়ে শুধু নাম্বার নেওয়া
+                    const count = +counter.innerText.replace('+', ''); 
+                    
+                    const inc = target / speed;
 
-        // Check if target is reached
-        if (count < target) {
-            // Add increment to count and output in counter
-            counter.innerText = Math.ceil(count + inc);
-            // Call function every ms
-            setTimeout(updateCount, 10);
-        } else {
-            counter.innerText = target + "+";
-        }
-    };
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target + "+";
+                    }
+                };
+                
+                updateCount();
+                observer.unobserve(counter); // একবার অ্যানিমেশন হওয়ার পর এটি থেমে যাবে
+            }
+        });
+    }, { threshold: 0.5 }); // সেকশনের অর্ধেক দেখা গেলে অ্যানিমেশন শুরু হবে
 
-    // Use Intersection Observer to trigger animation when section is in view
-    const observer = new IntersectionObserver(entries => {
-        if(entries[0].isIntersecting) {
-            updateCount();
-        }
-    });
-
-    observer.observe(counter);
-});
+    counters.forEach(counter => observer.observe(counter));
+}
 
 /* ====================================
-   Language Translation Data
+   2. Language Translation Data
 ==================================== */
 const translations = {
     en: {
         nav_home: "Home", nav_about: "About", nav_projects: "Projects", 
         nav_gallery: "Gallery", nav_volunteer: "Volunteer", nav_contact: "Contact", nav_donate: "Donate Now",
+        slide_1_title: "Helping People, Building a Better Future",
+        slide_1_desc: "Join hands with us to support underprivileged and vulnerable communities across Bangladesh.",
+        slide_2_title: "Zero Hunger Initiative",
+        slide_2_desc: "We strive to ensure that no one goes to sleep on an empty stomach.",
+        slide_3_title: "Education for All",
+        slide_3_desc: "Empowering the next generation through free education and learning materials.",
+        btn_our_work: "Our Work",
         hero_title: "Helping People, Building a Better Future",
         hero_subtitle: "Join hands with us to support underprivileged and vulnerable communities across Bangladesh.",
         btn_donate_now: "Donate Now", btn_join_us: "Join Us",
@@ -49,7 +64,7 @@ const translations = {
         srv_edu_title: "Education", srv_edu_desc: "Providing books, school fees, and essential support to underprivileged children.",
         srv_med_title: "Medical Help", srv_med_desc: "Organizing free medical camps, supplying medicines, and offering healthcare.",
         srv_food_title: "Food Distribution", srv_food_desc: "Distributing nutritious food to the hungry and providing special Ramadan meals.",
-        srv_disaster_title: "Disaster Relief", srv_disaster_desc: "Emergency response and relief materials during floods, storms, and natural disasters.", /* এখানে কমা মিসিং ছিল */
+        srv_disaster_title: "Disaster Relief", srv_disaster_desc: "Emergency response and relief materials during floods, storms, and natural disasters.", 
         footer_title: "M.R Welfare Foundation",
         footer_desc: "Committed to creating sustainable social impact and spreading kindness, humanity, and support to make a better future for everyone.",
         footer_quick_links: "Quick Links",
@@ -171,6 +186,13 @@ const translations = {
     bn: {
         nav_home: "হোম", nav_about: "আমাদের সম্পর্কে", nav_projects: "প্রজেক্টসমূহ", 
         nav_gallery: "গ্যালারি", nav_volunteer: "স্বেচ্ছাসেবক", nav_contact: "যোগাযোগ", nav_donate: "দান করুন",
+        slide_1_title: "মানুষকে সাহায্য করা, একটি সুন্দর ভবিষ্যৎ গড়া",
+        slide_1_desc: "বাংলাদেশের সুবিধাবঞ্চিত ও অসহায় মানুষের পাশে দাঁড়াতে আমাদের সাথে হাত মেলান।",
+        slide_2_title: "ক্ষুধামুক্ত সমাজ গড়ার উদ্যোগ",
+        slide_2_desc: "আমরা নিশ্চিত করার চেষ্টা করি যেন কেউ খালি পেটে ঘুমাতে না যায়।",
+        slide_3_title: "সবার জন্য শিক্ষা",
+        slide_3_desc: "বিনামূল্যে শিক্ষা এবং শিক্ষা সামগ্রীর মাধ্যমে আগামী প্রজন্মকে ক্ষমতায়ন করা।",
+        btn_our_work: "আমাদের কাজ",
         hero_title: "মানুষকে সাহায্য করা, একটি সুন্দর ভবিষ্যৎ গড়া",
         hero_subtitle: "বাংলাদেশের সুবিধাবঞ্চিত ও অসহায় মানুষের পাশে দাঁড়াতে আমাদের সাথে হাত মেলান।",
         btn_donate_now: "দান করুন", btn_join_us: "যোগ দিন",
@@ -182,13 +204,13 @@ const translations = {
         srv_edu_title: "শিক্ষা সহায়তা", srv_edu_desc: "সুবিধাবঞ্চিত শিশুদের বই, স্কুলের বেতন এবং প্রয়োজনীয় সহায়তা প্রদান করা।",
         srv_med_title: "চিকিৎসা সহায়তা", srv_med_desc: "বিনামূল্যে মেডিকেল ক্যাম্প আয়োজন, ওষুধ সরবরাহ এবং স্বাস্থ্যসেবা প্রদান।",
         srv_food_title: "খাদ্য সহায়তা", srv_food_desc: "ক্ষুধার্তদের মাঝে পুষ্টিকর খাবার বিতরণ এবং রমজানে বিশেষ আহারের ব্যবস্থা।",
-        srv_disaster_title: "দুর্যোগ সহায়তা", srv_disaster_desc: "বন্যা, ঝড় এবং প্রাকৃতিক দুর্যোগের সময় জরুরি প্রতিক্রিয়া এবং ত্রাণ সামগ্রী বিতরণ।", /* এখানে কমা মিসিং ছিল */
+        srv_disaster_title: "দুর্যোগ সহায়তা", srv_disaster_desc: "বন্যা, ঝড় এবং প্রাকৃতিক দুর্যোগের সময় জরুরি প্রতিক্রিয়া এবং ত্রাণ সামগ্রী বিতরণ।", 
         footer_title: "এম.আর ওয়েলফেয়ার ফাউন্ডেশন",
         footer_desc: "টেকসই সামাজিক প্রভাব তৈরি করতে এবং সবার জন্য একটি সুন্দর ভবিষ্যৎ গড়তে দয়া, মানবতা এবং সহায়তা ছড়িয়ে দিতে প্রতিশ্রুতিবদ্ধ।",
         footer_quick_links: "গুরুত্বপূর্ণ লিংক",
         footer_contact_info: "যোগাযোগের তথ্য",
         footer_address: "ঢাকা, বাংলাদেশ",
-        footer_phone: "+৮৮০ ১XXXXXXXXX",
+        footer_phone: "+৮৮০ ১৮১৮৮৬১৬৮৫",
         footer_email: "info@mrwelfare.org",
         footer_copyright: "© ২০২৬ এম.আর ওয়েলফেয়ার ফাউন্ডেশন। সর্বস্বত্ব সংরক্ষিত।",
         ab_header_title: "আমাদের সম্পর্কে",
@@ -198,24 +220,24 @@ const translations = {
         ab_desc: "একটি যত্নশীল হৃদয় এবং খোলা বাহু দিয়ে, আমরা এমন একটি পরিবেশ তৈরি করার চেষ্টা করি যেখানে মানুষ সান্ত্বনা, বোঝাপড়া এবং জীবনের চ্যালেঞ্জগুলো অতিক্রম করার শক্তি খুঁজে পায়। আন্তরিক সংযোগ এবং অটল নিষ্ঠার মাধ্যমে, আমরা অভাবগ্রস্তদের আত্মাকে উন্নীত করতে এবং সম্প্রদায়ের মধ্যে আপনত্বের অনুভূতি গড়ে তুলতে লক্ষ্য রাখি।",
         ab_btn: "আরও জানুন",
         stat_1: "সংগৃহীত অনুদান",
-        stat_2: "জীবন বাঁচানো হয়েছে",
+        stat_2: "জীবন বাঁচানো হয়েছে",
         stat_3: "কমিউনিটি মেম্বার",
         stat_4: "লক্ষ্য অর্জিত",
-        helped_title: "এখন পর্যন্ত আমাদের সহায়তা",
+        helped_title: "এখন পর্যন্ত আমাদের সহায়তা",
         feat_1_title: "মানবতার কল্যাণে",
         feat_1_desc: "শিক্ষা, স্বাস্থ্যসেবা, টেকসই উন্নয়ন এবং জরুরি ত্রাণের মাধ্যমে আমরা একটি ইতিবাচক প্রভাব তৈরি করি। এখনই যোগ দিন।",
         feat_2_title: "পরিবেশকে ভালোবাসুন",
         feat_2_desc: "মানুষকে সচেতন করার মাধ্যমে আমরা প্রকৃতির ভারসাম্য বজায় রাখতে পরিবেশের প্রতি ভালোবাসা এবং যত্ন অনুপ্রাণিত করার মিশনে রয়েছি।",
-        feat_3_title: "সম্প্রদায়কে ক্ষমতায়ন",
-        feat_3_desc: "কৌশলগত অংশীদারিত্ব এবং নিবেদিত স্বেচ্ছাসেবকদের মাধ্যমে, আমরা জরুরি পরিস্থিতিতে দ্রুত সাড়া দিয়ে আশ্রয় ও খাদ্য সরবরাহ করতে সক্ষম হয়েছি।",
+        feat_3_title: "সম্প্রদায়কে ক্ষমতায়ন",
+        feat_3_desc: "কৌশলগত অংশীদারিত্ব এবং নিবেদিত স্বেচ্ছাসেবকদের মাধ্যমে, আমরা জরুরি পরিস্থিতিতে দ্রুত সাড়া দিয়ে আশ্রয় ও খাদ্য সরবরাহ করতে সক্ষম হয়েছি।",
         proj_header_title: "আমাদের প্রজেক্টসমূহ",
         proj_header_sub: "সমাজে ইতিবাচক পরিবর্তন আনতে আমরা যে উদ্যোগগুলো নিচ্ছি তা ঘুরে দেখুন।",
         proj_edu_title: "শিক্ষা সহায়তা",
-        proj_edu_desc: "সুবিধাবঞ্চিত শিশুদের বিনামূল্যে বই, খাতা এবং স্কুলের বেতন প্রদান করা, যাতে তাদের উজ্জ্বল ভবিষ্যৎ নিশ্চিত হয়।",
+        proj_edu_desc: "সুবিধাবঞ্চিত শিশুদের বিনামূল্যে বই, খাতা এবং স্কুলের বেতন প্রদান করা, যাতে তাদের উজ্জ্বল ভবিষ্যৎ নিশ্চিত হয়।",
         proj_med_title: "চিকিৎসা সহায়তা",
         proj_med_desc: "বিনামূল্যে মেডিকেল ক্যাম্প আয়োজন, ওষুধ সরবরাহ এবং যারা চিকিৎসা ব্যয় বহন করতে অক্ষম তাদের স্বাস্থ্যসেবা নিশ্চিত করা।",
         proj_food_title: "খাদ্য সহায়তা",
-        proj_food_desc: "ক্ষুধার্তদের মাঝে পুষ্টিকর খাবার বিতরণ এবং রমজান ও সংকটকালীন সময়ে বিশেষ আহারের ব্যবস্থা করা।",
+        proj_food_desc: "ক্ষুধার্তদের মাঝে পুষ্টিকর খাবার বিতরণ এবং রমজান ও সংকটকালীন সময়ে বিশেষ আহারের ব্যবস্থা করা।",
         proj_disaster_title: "দুর্যোগ সহায়তা",
         proj_disaster_desc: "বন্যা ও ঘূর্ণিঝড়ের মতো প্রাকৃতিক দুর্যোগে দ্রুত সাড়া দিয়ে জরুরি আশ্রয়, নিরাপদ পানীয় জল এবং ত্রাণ সামগ্রী প্রদান করা।",
         proj_cta_title: "আমাদের উদ্যোগে সমর্থন দিন",
@@ -248,7 +270,7 @@ const translations = {
         vol_info_desc1: "স্বেচ্ছাসেবক হওয়া মানে শুধু আপনার সময় দেওয়া নয়; এটি আপনার হৃদয় উজাড় করে দেওয়া। আপনি যখন এম.আর ওয়েলফেয়ার ফাউন্ডেশনে যোগ দেন, তখন আপনি এমন একটি পরিবারের অংশ হয়ে যান যা অভাবীদের মুখে হাসি ফোটাতে অক্লান্ত পরিশ্রম করে।",
         vol_benefit_1_title: "জীবনে প্রভাব ফেলুন",
         vol_benefit_1_desc: "সরাসরি শিক্ষা, খাদ্য এবং চিকিৎসা সহায়তা প্রদানকারী প্রকল্পগুলোতে অবদান রাখুন।",
-        vol_benefit_2_title: "শিখুন এবং বড় হোন",
+        vol_benefit_2_title: "শিখুন এবং বড় হোন",
         vol_benefit_2_desc: "নেতৃত্বের দক্ষতা, দলবদ্ধ কাজ বিকাশ করুন এবং মূল্যবান অভিজ্ঞতা অর্জন করুন।",
         vol_benefit_3_title: "নেটওয়ার্ক তৈরি করুন",
         vol_benefit_3_desc: "সমাজকর্মে আপনার মতো আগ্রহী এবং সমমনা মানুষের সাথে পরিচিত হোন।",
@@ -273,7 +295,7 @@ const translations = {
         gal_vol_desc: "দেখুন কীভাবে আমাদের নিবেদিত দল সরাসরি মাঠে কাজ করে প্রভাব ফেলছে এবং হাজারো মানুষের মুখে হাসি ফোটাচ্ছে।",
         gal_more_title: "আরও কিছু মুহূর্ত",
         gal_join_title: "আমাদের কমিউনিটি গ্রুপে যুক্ত হোন",
-        gal_join_desc: "সর্বশেষ আপডেট, ইভেন্টের খবর পেতে এবং আমাদের ক্রমবর্ধমান পরিবারের অংশ হতে আপনার ইমেইল দিয়ে যুক্ত হোন।",
+        gal_join_desc: "সর্বশেষ আপডেট, ইভেন্টের খবর পেতে এবং আমাদের ক্রমবর্ধমান পরিবারের অংশ হতে আপনার ইমেইল দিয়ে যুক্ত হোন।",
         gal_join_placeholder: "আপনার ইমেইল এড্রেস লিখুন",
         gal_join_btn: "যুক্ত হোন",
         nav_blog: "খবর",
@@ -282,10 +304,10 @@ const translations = {
         blog_1_title: "সিলেটে ব্যাপক খাদ্য বিতরণ",
         blog_1_desc: "আমরা সম্প্রতি সিলেট অঞ্চলে ভয়াবহ বন্যায় ক্ষতিগ্রস্ত ৫০০টিরও বেশি পরিবারকে জরুরি খাদ্য সহায়তা প্রদান করেছি।",
         blog_2_title: "পিরোজপুরে ফ্রি মেডিকেল ক্যাম্প",
-        blog_2_desc: "আমাদের মেডিকেল দল পিরোজপুরে দুই দিনের একটি ফ্রি হেলথ ক্যাম্পের আয়োজন করে, যেখানে ১,০০০-এর বেশি রোগীকে চিকিৎসাসেবা দেওয়া হয়।",
+        blog_2_desc: "আমাদের মেডিকেল দল পিরোজপুরে দুই দিনের একটি ফ্রি হেলথ ক্যাম্পের আয়োজন করে, যেখানে ১,০০০-এর বেশি রোগীকে চিকিৎসাসেবা দেওয়া হয়।",
         blog_3_title: "শীতবস্ত্র বিতরণ",
-        blog_3_desc: "প্রচণ্ড শীত থেকে অসহায় মানুষদের রক্ষা করতে আমাদের স্বেচ্ছাসেবকরা উত্তরাঞ্চলের বেশ কয়েকটি জেলায় শীতবস্ত্র ও কম্বল বিতরণ করেছেন।",
-        blog_btn_read: "বিস্তারিত পড়ুন",
+        blog_3_desc: "প্রচণ্ড শীত থেকে অসহায় মানুষদের রক্ষা করতে আমাদের স্বেচ্ছাসেবকরা উত্তরাঞ্চলের বেশ কয়েকটি জেলায় শীতবস্ত্র ও কম্বল বিতরণ করেছেন।",
+        blog_btn_read: "বিস্তারিত পড়ুন",
         contact_header_title: "যোগাযোগ করুন",
         contact_header_sub: "আপনার কি কোনো প্রশ্ন আছে বা আমাদের সাথে যুক্ত হতে চান? আমরা আপনার কথা শুনতে চাই।",
         contact_info_title: "যোগাযোগের ঠিকানা",
@@ -297,14 +319,14 @@ const translations = {
         contact_form_title: "আমাদের বার্তা পাঠান",
         contact_name_ph: "আপনার নাম",
         contact_email_ph: "আপনার ইমেইল",
-        contact_subject_ph: "বিষয় (Subject)",
+        contact_subject_ph: "বিষয় (Subject)",
         contact_msg_ph: "আপনার বার্তা এখানে লিখুন...",
         contact_btn_submit: "বার্তা পাঠান"
     }
 };
 
 /* ====================================
-   Language Toggle Logic
+   3. Language Toggle Logic
 ==================================== */
 const langToggleBtn = document.getElementById("lang-toggle");
 let currentLang = localStorage.getItem("site_lang") || "en";
@@ -326,41 +348,53 @@ function setLanguage(lang) {
         }
     });
 
-    if (lang === "bn") {
-        langToggleBtn.innerText = "English";
-        document.body.classList.add("bangla-active");
-    } else {
-        langToggleBtn.innerText = "বাংলা";
-        document.body.classList.remove("bangla-active");
+    if (langToggleBtn) { // Safety check
+        if (lang === "bn") {
+            langToggleBtn.innerText = "English";
+            document.body.classList.add("bangla-active");
+        } else {
+            langToggleBtn.innerText = "বাংলা";
+            document.body.classList.remove("bangla-active");
+        }
     }
     localStorage.setItem("site_lang", lang);
 }
+
 // Initial Load
 setLanguage(currentLang);
 
 // Toggle Click Event
-langToggleBtn.addEventListener("click", () => {
-    currentLang = currentLang === "en" ? "bn" : "en";
-    setLanguage(currentLang);
-});
-
+if (langToggleBtn) { // Safety check
+    langToggleBtn.addEventListener("click", () => {
+        currentLang = currentLang === "en" ? "bn" : "en";
+        setLanguage(currentLang);
+    });
+}
 
 /* ====================================
-   Dark Mode Toggle Logic
+   4. Dark Mode Toggle Logic
 ==================================== */
 const themeToggleBtn = document.getElementById("theme-toggle");
-const themeIcon = themeToggleBtn.querySelector("i");
 let isDarkMode = localStorage.getItem("dark_mode") === "true";
 
 function applyTheme(dark) {
     if (dark) {
         document.body.classList.add("dark-mode");
-        themeIcon.classList.remove("fa-moon");
-        themeIcon.classList.add("fa-sun"); // সূর্য আইকন হবে
     } else {
         document.body.classList.remove("dark-mode");
-        themeIcon.classList.remove("fa-sun");
-        themeIcon.classList.add("fa-moon"); // চাঁদ আইকন হবে
+    }
+
+    if (themeToggleBtn) { // Safety check
+        const themeIcon = themeToggleBtn.querySelector("i");
+        if (themeIcon) {
+            if (dark) {
+                themeIcon.classList.remove("fa-moon");
+                themeIcon.classList.add("fa-sun");
+            } else {
+                themeIcon.classList.remove("fa-sun");
+                themeIcon.classList.add("fa-moon");
+            }
+        }
     }
 }
 
@@ -368,29 +402,10 @@ function applyTheme(dark) {
 applyTheme(isDarkMode);
 
 // Toggle Click Event
-themeToggleBtn.addEventListener("click", () => {
-    isDarkMode = !isDarkMode;
-    localStorage.setItem("dark_mode", isDarkMode);
-    applyTheme(isDarkMode);
-});
-/* ====================================
-   Auto-Hide Navbar on Scroll Logic
-==================================== */
-let lastScrollTop = 0;
-const navbar = document.querySelector('.custom-navbar');
-
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // যদি কেউ নিচের দিকে স্ক্রল করে এবং স্ক্রল ১০০ পিক্সেলের বেশি হয়, তাহলে ন্যাভবার লুকাবে
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
-        navbar.classList.add('nav-hidden');
-    } 
-    // যদি কেউ উপরের দিকে স্ক্রল করে, তাহলে ন্যাভবার আবার দেখাবে
-    else {
-        navbar.classList.remove('nav-hidden');
-    }
-    
-    // মোবাইলে নেগেটিভ স্ক্রলিং ফিক্স করার জন্য
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
-});
+if (themeToggleBtn) { // Safety check
+    themeToggleBtn.addEventListener("click", () => {
+        isDarkMode = !isDarkMode;
+        localStorage.setItem("dark_mode", isDarkMode);
+        applyTheme(isDarkMode);
+    });
+}

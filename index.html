@@ -61,31 +61,64 @@
         </div>
     </nav>
 
-<header class="hero-section d-flex align-items-center" 
-style="background: url('asstes/image/bacground.png') center/cover no-repeat; height:100vh;">
-    
-    <div class="container text-center text-white hero-content">
-        <h1 class="display-3 fw-bold mb-4" data-lang="hero_title">
-            Helping People, Building a Better Future
-        </h1>
-
-        <p class="lead mb-5" data-lang="hero_subtitle">
-            Join hands with us to support underprivileged and vulnerable
-            communities across Bangladesh.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="donation.html" class="btn btn-primary-custom btn-lg me-3" data-lang="btn_donate_now">
-                Donate Now
-            </a>
-
-            <a href="volunteer.html" class="btn btn-outline-light btn-lg" data-lang="btn_join_us">
-                Join Us
-            </a>
+<header id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    </div>
 
-</header>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <div class="slide-image" style="background-image: linear-gradient(rgba(0, 106, 78, 0.7), rgba(0, 0, 0, 0.7)), url('asstes/image/bacground.png');"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                    <div class="container text-center">
+                        <h1 class="display-3 fw-bold text-white mb-4" data-lang="slide_1_title">Helping People, Building a Better Future</h1>
+                        <p class="lead text-white mb-5 mx-auto" style="max-width: 700px;" data-lang="slide_1_desc">Join hands with us to support underprivileged and vulnerable communities across Bangladesh.</p>
+                        <div class="hero-buttons">
+                            <a href="donation.html" class="btn btn-donate btn-lg me-md-3 px-4 py-2" data-lang="btn_donate_now">Donate Now</a>
+                            <a href="volunteer.html" class="btn btn-outline-light btn-lg px-4 py-2 mt-3 mt-md-0" data-lang="btn_join_us">Join Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item" data-bs-interval="4000">
+                <div class="slide-image" style="background-image: linear-gradient(rgba(0, 106, 78, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                    <div class="container text-center">
+                        <h1 class="display-3 fw-bold text-white mb-4" data-lang="slide_2_title">Zero Hunger Initiative</h1>
+                        <p class="lead text-white mb-5 mx-auto" style="max-width: 700px;" data-lang="slide_2_desc">We strive to ensure that no one goes to sleep on an empty stomach.</p>
+                        <div class="hero-buttons">
+                            <a href="projects.html" class="btn btn-donate btn-lg px-4 py-2" data-lang="btn_our_work">Our Work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="4000">
+                <div class="slide-image" style="background-image: linear-gradient(rgba(0, 106, 78, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                    <div class="container text-center">
+                        <h1 class="display-3 fw-bold text-white mb-4" data-lang="slide_3_title">Education for All</h1>
+                        <p class="lead text-white mb-5 mx-auto" style="max-width: 700px;" data-lang="slide_3_desc">Empowering the next generation through free education and learning materials.</p>
+                        <div class="hero-buttons">
+                            <a href="donation.html" class="btn btn-donate btn-lg px-4 py-2" data-lang="btn_donate_now">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </header>
 
     <section class="about-short py-5">
         <div class="container py-4">
@@ -155,9 +188,7 @@ style="background: url('asstes/image/bacground.png') center/cover no-repeat; hei
             </div>
         </div>
     </section>
-
-
-
+ <div style="height: 15px; background-color: #F5A623; width: 100%;"></div>
     <footer class="footer py-5 text-white">
         <div class="container">
             <div class="row g-4">

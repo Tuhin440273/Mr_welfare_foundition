@@ -1,20 +1,24 @@
 /* =========================================
    M.R WELFARE FOUNDATION - CUSTOM STYLES
    Theme: Bangladesh Red & Green (Professional)
+   Author: M.R Welfare Team
 ========================================= */
 
+/* =========================================
+   1. VARIABLES & THEME SETTINGS
+========================================= */
 :root {
-    /* Red & Green Theme Colors */
-    --primary-green: #006A4E; /* Bangladesh Flag Deep Green */
-    --accent-red: #D32F2F;    /* Professional Crimson Red */
+    /* Brand Colors */
+    --primary-green: #006A4E; 
+    --accent-red: #D32F2F;    
     
-    /* Other Layout Colors */
-    --footer-bg: #6D8299;     /* Heather Blue (Always) */
-    --alternate-bg: #F2F5F3;  /* Very Light Greenish-White */
+    /* Background & Layout Colors */
+    --footer-bg: #6D8299;     
+    --alternate-bg: #F2F5F3;  
     --main-bg: #FFFFFF;            
     --text-color: #333333;
     
-    /* Fonts */
+    /* Typography */
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Open Sans', sans-serif;
     --font-bangla: 'Noto Sans Bengali', sans-serif;
@@ -23,43 +27,50 @@
 /* --- Dark Mode Variables --- */
 body.dark-mode {
     --main-bg: #121212;
-    --alternate-bg: #1A221F; /* Very Dark Greenish-Black */
+    --alternate-bg: #1A221F; 
     --text-color: #E0E0E0;
 }
 
-/* Base Styles */
+
+/* =========================================
+   2. GLOBAL & BASE STYLES
+========================================= */
 body {
     font-family: var(--font-body);
     background-color: var(--main-bg);
     color: var(--text-color);
-    transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-family: var(--font-heading); 
 }
 
 /* Bangla Font Setup */
-body.bangla-active { font-family: var(--font-bangla); }
-h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
-body.bangla-active h1, body.bangla-active h2, body.bangla-active h3, body.bangla-active h4, body.bangla-active h5, body.bangla-active h6 {
+body.bangla-active,
+body.bangla-active h1, body.bangla-active h2, body.bangla-active h3, 
+body.bangla-active h4, body.bangla-active h5, body.bangla-active h6 {
     font-family: var(--font-bangla);
 }
 
-/* --- Theme Backgrounds & Text Colors (For Smooth Transitions) --- */
+/* --- Utility Classes (Colors & Backgrounds) --- */
+.text-primary-custom { color: var(--primary-green) !important; }
+.text-secondary-custom { color: var(--accent-red) !important; }
+
 .theme-bg { background-color: var(--main-bg); transition: 0.4s; }
 .theme-bg-alt { background-color: var(--alternate-bg); transition: 0.4s; }
 .theme-text { color: var(--text-color) !important; transition: 0.4s; }
 .theme-text-muted { color: #6c757d !important; transition: 0.4s; }
 
-/* Text Colors */
-.text-primary-custom { color: var(--primary-green) !important; }
-.text-secondary-custom { color: var(--accent-red) !important; }
-.bg-light-alt { background-color: var(--alternate-bg); }
-
-/* Dark Mode Specific Adjustments */
 body.dark-mode .theme-bg-alt { background-color: var(--alternate-bg) !important; }
-body.dark-mode .theme-card { background-color: #242424 !important; }
 body.dark-mode .theme-text { color: #E0E0E0 !important; }
 body.dark-mode .theme-text-muted { color: #A0A0A0 !important; }
+body.dark-mode .theme-card { background-color: #242424 !important; }
 
-/* Custom Buttons */
+
+/* =========================================
+   3. BUTTONS
+========================================= */
 .btn-primary-custom {
     background-color: var(--primary-green);
     color: #fff;
@@ -74,7 +85,6 @@ body.dark-mode .theme-text-muted { color: #A0A0A0 !important; }
     color: #fff;
 }
 
-/* Donate Button */
 .btn-donate {
     background-color: var(--accent-red);
     color: #fff;
@@ -90,78 +100,67 @@ body.dark-mode .theme-text-muted { color: #A0A0A0 !important; }
     color: #fff;
 }
 
-/* Navbar */
-/* Navbar */
-.custom-navbar {
-    background-color: var(--primary-green);
-    padding: 5px 0 !important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    /* নিচের লাইনটি অ্যানিমেশনের জন্য যোগ করা হলো */
-    transition: transform 0.4s ease-in-out, background-color 0.4s; 
-    z-index: 1030; /* অন্য সবকিছুর উপরে রাখার জন্য */
-}
-
-/* স্ক্রল করলে ন্যাভবার লুকানোর ক্লাস */
-.nav-hidden {
-    transform: translateY(-100%); /* এটি ন্যাভবারকে উপরের দিকে টেনে স্ক্রিনের বাইরে লুকিয়ে ফেলবে */
-}
-
 
 /* =========================================
-   Navbar Logo & Brand Text Adjustments
+   4. HEADER, NAVBAR & BRAND
 ========================================= */
+.custom-navbar {
+    background-color: var(--primary-green);
+    padding: 8px 0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 1030; 
+    position: sticky; /* এটি ন্যাভবারকে লাফাতে দেবে না */
+    top: 0;
+}
+
+/* Brand & Logo */
 .custom-brand {
     display: flex;
     text-decoration: none;
     align-items: center;
-    gap: 8px; /* লোগো এবং লেখার মাঝের ফাঁকা জায়গা একদম কমিয়ে দিলাম */
+    gap: 10px; 
     z-index: 10;
 }
 
 .nav-logo {
-    height: 60px; /* লোগো আগের চেয়ে অনেক বড় এবং স্পষ্ট দেখাবে */
+    height: 55px; 
     width: auto;
     object-fit: contain;
-    /* নোট: যদি আপনার PNG ইমেজের ভেতরেই অনেক ফাঁকা জায়গা থাকে, তাহলে নিচের লাইনটির কমেন্ট তুলে দিন: */
-    margin-right: opx; 
+    transition: 0.3s ease;
 }
 
-/* টেক্সটের ডিজাইন আরও প্রফেশনাল করা হলো */
 .brand-title {
-    font-size: 1.35rem; /* লেখাটি লোগোর সাথে ব্যালেন্স করার জন্য সাইজ */
+    font-size: 1.35rem; 
     font-weight: 800;
     letter-spacing: 1px;
     font-family: var(--font-heading);
     line-height: 1;
+    color: #ffffff;
 }
 
 .brand-subtitle {
     color: var(--accent-red);
     font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 3.5px; /* নিচের লেখাটা একটু ছড়ানো থাকলে প্রফেশনাল লাগে */
+    letter-spacing: 3.5px; 
     font-family: var(--font-heading);
     line-height: 1;
     margin-top: 3px;
 }
 
-/* মোবাইলের জন্য রেস্পন্সিভ ফিক্স */
-@media (max-width: 768px) {
-    .custom-brand {
-        gap: 18px; /* মোবাইলে গ্যাপ আরও কম হবে */
-    }
-    .nav-logo {
-        height: 50px; /* মোবাইলেও লোগো স্পষ্ট ও বড় থাকবে */
-    }
-    .brand-title {
-        font-size: 1.1rem;
-    }
-    .brand-subtitle {
-        font-size: 0.65rem;
-        letter-spacing: 2px;
-    }
+/* Nav Links & Toggles */
+.custom-navbar .nav-link {
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    margin: 0 5px;
+    transition: 0.3s;
 }
-/* Theme & Language Toggles */
+
+.custom-navbar .nav-link:hover, 
+.custom-navbar .nav-link.active {
+    color: #fff;
+}
+
 #theme-toggle, #lang-toggle {
     border-color: rgba(255,255,255,0.5);
     color: #fff;
@@ -172,14 +171,53 @@ body.dark-mode .theme-text-muted { color: #A0A0A0 !important; }
     border-color: var(--accent-red);
 }
 
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(rgba(0, 106, 78, 0.75), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+
+/* =========================================
+   5. COMMON COMPONENTS (Hero, Cards, Icons)
+========================================= */
+/* Hero Slider Styles */
+#heroCarousel {
     height: 80vh;
     min-height: 500px;
+    background-color: #000;
 }
 
-/* Services / Our Work */
+.slide-image {
+    height: 80vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: zoomEffect 10s infinite alternate; /* একটি সুন্দর জুম এনিমেশন */
+}
+
+@keyframes zoomEffect {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+.carousel-caption {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 0;
+}
+
+/* স্লাইডারের রেস্পন্সিভ ফিক্স */
+@media (max-width: 768px) {
+    #heroCarousel, .slide-image {
+        height: 70vh;
+        min-height: 450px;
+    }
+    .carousel-caption h1 {
+        font-size: 2.2rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
 .service-card {
     transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 10px;
@@ -208,100 +246,7 @@ body.dark-mode .theme-text-muted { color: #A0A0A0 !important; }
     color: #fff;
 }
 
-body.dark-mode .icon-box {
-    background-color: #333;
-}
-
-/* =========================================
-   ABOUT US PAGE SPECIFIC STYLES
-========================================= */
-
-/* Rounded Header */
-.about-hero-section {
-    background-color: var(--primary-green);
-    min-height: 250px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-    padding-top: 50px;
-}
-
-/* Yellow Highlight Underline */
-.highlight-underline {
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-}
-
-.highlight-underline::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 2px;
-    width: 100%;
-    height: 6px;
-    background-color: #F5A623; 
-    z-index: -1;
-    border-radius: 3px;
-}
-
-/* Side Image */
-.about-side-img {
-    border-radius: 20px;
-    object-fit: cover;
-    height: 450px;
-    width: 100%;
-    max-width: 400px;
-}
-
-/* Stats Banner */
-.stats-banner {
-    background-color: var(--primary-green);
-    border-radius: 20px;
-    padding: 60px 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.stats-banner::before {
-    content: "\f004  \f004  \f004";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 400;
-    font-size: 150px;
-    color: rgba(255, 255, 255, 0.03);
-    position: absolute;
-    top: -50px;
-    left: 10%;
-    letter-spacing: 150px;
-    pointer-events: none;
-}
-
-.stats-label {
-    color: #F5A623; 
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-/* Feature Boxes */
-.feature-box {
-    padding: 30px;
-    border-radius: 16px;
-    transition: 0.3s;
-    height: 100%;
-}
-
-.feature-box.active {
-    background-color: var(--main-bg);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-body.dark-mode .feature-box.active {
-    background-color: #242424;
-    border: 1px solid #333;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-}
-
+body.dark-mode .icon-box { background-color: #333; }
 .icon-wrapper {
     width: 60px;
     height: 60px;
@@ -314,56 +259,88 @@ body.dark-mode .feature-box.active {
     font-size: 24px;
     margin-bottom: 20px;
 }
-
 body.dark-mode .icon-wrapper {
     background-color: rgba(255, 255, 255, 0.1);
     color: #A5D6A7;
 }
 
-/* =========================================
-   OUR PROJECTS PAGE SPECIFIC STYLES
-========================================= */
 
+/* =========================================
+   6. ABOUT US PAGE STYLES
+========================================= */
+.about-hero-section {
+    background-color: var(--primary-green);
+    min-height: 250px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-top: 50px;
+}
+
+.highlight-underline { position: relative; display: inline-block; z-index: 1; }
+.highlight-underline::after {
+    content: ""; position: absolute; left: 0; bottom: 2px;
+    width: 100%; height: 6px; background-color: #F5A623; 
+    z-index: -1; border-radius: 3px;
+}
+
+.about-side-img {
+    border-radius: 20px;
+    object-fit: cover;
+    height: 450px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.stats-banner {
+    background-color: var(--primary-green);
+    border-radius: 20px;
+    padding: 60px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-banner::before {
+    content: "\f004  \f004  \f004";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400; font-size: 150px; color: rgba(255, 255, 255, 0.03);
+    position: absolute; top: -50px; left: 10%; letter-spacing: 150px; pointer-events: none;
+}
+
+.stats-label { color: #F5A623; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; }
+
+.feature-box { padding: 30px; border-radius: 16px; transition: 0.3s; height: 100%; }
+.feature-box.active {
+    background-color: var(--main-bg);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+body.dark-mode .feature-box.active {
+    background-color: #242424;
+    border: 1px solid #333;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+
+/* =========================================
+   7. PROJECTS PAGE STYLES
+========================================= */
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--main-bg);
 }
-
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
 }
+body.dark-mode .project-card { background-color: #242424; }
+body.dark-mode .project-card:hover { box-shadow: 0 15px 35px rgba(0,0,0,0.4) !important; }
 
-body.dark-mode .project-card {
-    background-color: #242424;
-}
-
-body.dark-mode .project-card:hover {
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4) !important;
-}
-
-.project-img-wrapper {
-    position: relative;
-    overflow: hidden;
-    height: 250px;
-}
-
-.project-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-card:hover .project-img {
-    transform: scale(1.1); 
-}
+.project-img-wrapper { position: relative; overflow: hidden; height: 250px; }
+.project-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.project-card:hover .project-img { transform: scale(1.1); }
 
 .project-badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
+    position: absolute; top: 20px; right: 20px; z-index: 2;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
@@ -375,362 +352,166 @@ body.dark-mode .project-card:hover {
     border-radius: 25px;
     transition: 0.3s;
 }
-
-.btn-outline-primary-custom:hover {
-    background-color: var(--primary-green);
-    color: #fff;
-}
-
-body.dark-mode .btn-outline-primary-custom {
-    color: #fff;
-    border-color: #fff;
-}
-
-body.dark-mode .btn-outline-primary-custom:hover {
-    background-color: var(--primary-green);
-    border-color: var(--primary-green);
-}
-
-/* =========================================
-   FOOTER - Updated Color
-========================================= */
-.footer {
-    background-color: rgba(35, 69, 64, 1) !important; 
-    color: #ffffff !important;
-}
-
-body.dark-mode .footer h4, 
-body.dark-mode .footer h5, 
-body.dark-mode .footer p, 
-body.dark-mode .footer span,
-.footer h4, .footer h5, .footer p, .footer span {
-    color: #ffffff !important;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #E0E0E0 !important;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #FFFFFF !important;
-    padding-left: 5px;
-    text-decoration: underline;
-}
-
-.border-secondary {
-    border-color: rgba(255, 255, 255, 0.2) !important;
-}
+.btn-outline-primary-custom:hover { background-color: var(--primary-green); color: #fff; }
+body.dark-mode .btn-outline-primary-custom { color: #fff; border-color: #fff; }
+body.dark-mode .btn-outline-primary-custom:hover { background-color: var(--primary-green); border-color: var(--primary-green); }
 
 
 /* =========================================
-   DONATION PAGE SPECIFIC STYLES
+   8. DONATION PAGE STYLES
 ========================================= */
-
-/* Amount Selection Buttons */
 .amount-btn {
-    color: var(--primary-green);
-    border-color: var(--primary-green);
-    border-radius: 8px;
-    transition: 0.3s;
+    color: var(--primary-green); border-color: var(--primary-green);
+    border-radius: 8px; transition: 0.3s;
 }
-
 .amount-btn:hover, .amount-btn.active {
-    background-color: var(--primary-green);
-    color: #fff;
-    border-color: var(--primary-green);
+    background-color: var(--primary-green); color: #fff; border-color: var(--primary-green);
 }
-
-body.dark-mode .amount-btn {
-    color: #A5D6A7;
-    border-color: #A5D6A7;
-}
-
+body.dark-mode .amount-btn { color: #A5D6A7; border-color: #A5D6A7; }
 body.dark-mode .amount-btn:hover, body.dark-mode .amount-btn.active {
-    background-color: #A5D6A7;
-    color: #121212;
+    background-color: #A5D6A7; color: #121212;
 }
 
-/* Custom Input Field */
-.amount-input::-webkit-outer-spin-button,
-.amount-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
+.amount-input::-webkit-outer-spin-button, .amount-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 
-/* Dark Mode Form Inputs */
 .theme-input {
-    background-color: transparent;
-    border: 1px solid #ced4da;
-    color: var(--text-color);
-    transition: 0.3s;
+    background-color: transparent; border: 1px solid #ced4da;
+    color: var(--text-color); transition: 0.3s;
 }
-
-body.dark-mode .theme-input {
-    background-color: #2A2A2A;
-    border-color: #444;
-    color: #E0E0E0;
-}
-
-body.dark-mode .theme-input::placeholder {
-    color: #888;
-}
-
+body.dark-mode .theme-input { background-color: #2A2A2A; border-color: #444; color: #E0E0E0; }
+body.dark-mode .theme-input::placeholder { color: #888; }
 body.dark-mode .theme-input:focus {
-    background-color: #333;
-    border-color: var(--primary-green);
-    color: #fff;
+    background-color: #333; border-color: var(--primary-green); color: #fff;
     box-shadow: 0 0 0 0.25rem rgba(0, 106, 78, 0.25);
 }
 
-/* Payment Boxes */
 .payment-box {
-    background-color: #FAFAFA;
-    border-color: #eee !important;
-    transition: 0.3s;
+    background-color: #FAFAFA; border-color: #eee !important; transition: 0.3s;
 }
+.payment-box:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); transform: translateY(-2px); }
+body.dark-mode .payment-box { background-color: #2A2A2A; border-color: #333 !important; }
+body.dark-mode .payment-box .bg-light { background-color: #333 !important; }
 
-.payment-box:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transform: translateY(-2px);
-}
-
-body.dark-mode .payment-box {
-    background-color: #2A2A2A;
-    border-color: #333 !important;
-}
-
-body.dark-mode .payment-box .bg-light {
-    background-color: #333 !important;
-}
 
 /* =========================================
-   GALLERY PAGE SPECIFIC STYLES
+   9. GALLERY & MASONRY STYLES
 ========================================= */
-
 .gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    cursor: pointer;
-    background-color: #000; /* For better contrast during transition */
+    position: relative; overflow: hidden; border-radius: 12px;
+    cursor: pointer; background-color: #000;
 }
-
 .gallery-item img {
-    width: 100%;
-    height: 300px; /* Fixed height for uniformity */
-    object-fit: cover;
+    width: 100%; height: 300px; object-fit: cover;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
-
-/* The overlay that slides up from the bottom */
 .gallery-overlay {
-    position: absolute;
-    bottom: -100%; /* Hidden by default */
-    left: 0;
-    width: 100%;
-    padding: 30px 20px 20px;
-    background: linear-gradient(to top, rgba(0, 106, 78, 0.95), transparent);
-    color: white;
-    transition: bottom 0.4s ease-in-out;
+    position: absolute; bottom: -100%; left: 0; width: 100%;
+    padding: 30px 20px 20px; background: linear-gradient(to top, rgba(0, 106, 78, 0.95), transparent);
+    color: white; transition: bottom 0.4s ease-in-out;
 }
+.gallery-item:hover img { transform: scale(1.1); opacity: 0.8; }
+.gallery-item:hover .gallery-overlay { bottom: 0; }
+body.dark-mode .gallery-item { border: 1px solid #333; }
 
-/* Hover Effects */
-.gallery-item:hover img {
-    transform: scale(1.1);
-    opacity: 0.8; /* Slightly darkens the image to make text pop */
-}
-
-.gallery-item:hover .gallery-overlay {
-    bottom: 0; /* Slides up smoothly */
-}
-
-body.dark-mode .gallery-item {
-    border: 1px solid #333;
-}
-/* =========================================
-   MASONRY GALLERY (Random Layout)
-========================================= */
-.masonry-gallery {
-    column-count: 3;
-    column-gap: 1.5rem;
-}
-
+/* Masonry */
+.masonry-gallery { column-count: 3; column-gap: 1.5rem; }
 .masonry-item {
-    break-inside: avoid; /* Prevents images from splitting across columns */
-    margin-bottom: 1.5rem;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    background-color: #000;
+    break-inside: avoid; margin-bottom: 1.5rem; border-radius: 12px;
+    overflow: hidden; position: relative; background-color: #000;
 }
-
 .masonry-item img {
-    width: 100%;
-    display: block;
-    border-radius: 12px;
+    width: 100%; display: block; border-radius: 12px;
     transition: transform 0.4s ease, opacity 0.4s ease;
 }
+.masonry-item:hover img { transform: scale(1.08); opacity: 0.85; }
+body.dark-mode .masonry-item { border: 1px solid #333; }
 
-.masonry-item:hover img {
-    transform: scale(1.08);
-    opacity: 0.85;
-}
 
-body.dark-mode .masonry-item {
-    border: 1px solid #333;
-}
-
-/* Responsive Masonry */
-@media (max-width: 991px) {
-    .masonry-gallery {
-        column-count: 2;
-    }
-}
-
-@media (max-width: 576px) {
-    .masonry-gallery {
-        column-count: 1;
-    }
-}
 /* =========================================
-   BLOG & NEWS PAGE SPECIFIC STYLES
+   10. BLOG & CONTACT PAGE STYLES
 ========================================= */
+.blog-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.blog-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important; }
+body.dark-mode .blog-card:hover { box-shadow: 0 15px 35px rgba(0,0,0,0.5) !important; }
 
-.blog-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
-}
-
-body.dark-mode .blog-card:hover {
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5) !important;
-}
-
-/* Date Badge Overlapping Image */
 .blog-date-badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: var(--accent-red);
-    color: white;
-    padding: 8px 15px;
-    border-radius: 10px;
-    text-align: center;
-    line-height: 1.2;
+    position: absolute; top: 15px; left: 15px; background-color: var(--accent-red);
+    color: white; padding: 8px 15px; border-radius: 10px; text-align: center; line-height: 1.2;
 }
+.blog-date-badge span { font-size: 1.5rem; font-weight: 700; }
 
-.blog-date-badge span {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-/* Custom Pagination */
 .pagination-custom .page-link {
-    color: var(--primary-green);
-    border: none;
-    margin: 0 5px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s;
-    background-color: var(--main-bg);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    color: var(--primary-green); border: none; margin: 0 5px; border-radius: 8px;
+    font-weight: 600; transition: 0.3s; background-color: var(--main-bg); box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
+.pagination-custom .page-item.active .page-link { background-color: var(--primary-green); color: white; }
+.pagination-custom .page-link:hover { background-color: var(--alternate-bg); }
+body.dark-mode .pagination-custom .page-link { background-color: #242424; color: #A5D6A7; }
+body.dark-mode .pagination-custom .page-item.active .page-link { background-color: var(--primary-green); color: white; }
 
-.pagination-custom .page-item.active .page-link {
-    background-color: var(--primary-green);
-    color: white;
-}
-
-.pagination-custom .page-link:hover {
-    background-color: var(--alternate-bg);
-}
-
-body.dark-mode .pagination-custom .page-link {
-    background-color: #242424;
-    color: #A5D6A7;
-}
-
-body.dark-mode .pagination-custom .page-item.active .page-link {
-    background-color: var(--primary-green);
-    color: white;
-}
-/* =========================================
-   CONTACT PAGE SPECIFIC STYLES
-========================================= */
-
-.contact-info-card {
-    transition: transform 0.3s ease;
-}
-
-.contact-info-card:hover {
-    transform: translateX(10px); /* Hover করলে একটু ডানদিকে সরবে */
-}
-
-/* Social Media Icon Buttons */
+.contact-info-card { transition: transform 0.3s ease; }
+.contact-info-card:hover { transform: translateX(10px); }
 .social-icon-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    background-color: var(--primary-green);
-    color: white;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: 0.3s ease;
+    display: flex; align-items: center; justify-content: center; width: 45px; height: 45px;
+    background-color: var(--primary-green); color: white; border-radius: 50%;
+    font-size: 1.2rem; text-decoration: none; transition: 0.3s ease;
 }
-
 .social-icon-btn:hover {
-    background-color: var(--accent-red);
-    color: white;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
+    background-color: var(--accent-red); color: white; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
 }
+body.dark-mode .contact-info-card .icon-wrapper { background-color: #333 !important; color: #A5D6A7 !important; }
 
-body.dark-mode .contact-info-card .icon-wrapper {
-    background-color: #333 !important;
-    color: #A5D6A7 !important;
-}
+.map-section iframe { filter: grayscale(20%); }
+body.dark-mode .map-section iframe { filter: invert(90%) hue-rotate(180deg) grayscale(30%); }
 
-/* Map Section Adjustment */
-.map-section iframe {
-    filter: grayscale(20%); /* ম্যাপটাকে ওয়েবসাইটের কালারের সাথে একটু মানানসই করার জন্য */
-}
 
-body.dark-mode .map-section iframe {
-    filter: invert(90%) hue-rotate(180deg) grayscale(30%); /* ডার্ক মোডে ম্যাপটাও ডার্ক হয়ে যাবে */
-}
 /* =========================================
-   RESPONSIVE DESIGN (MOBILE & TABLET FIXES)
+   11. FOOTER
 ========================================= */
+.footer { background-color: rgba(35, 69, 64, 1) !important; color: #ffffff !important; }
+body.dark-mode .footer h4, body.dark-mode .footer h5, body.dark-mode .footer p, body.dark-mode .footer span,
+.footer h4, .footer h5, .footer p, .footer span { color: #ffffff !important; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: #E0E0E0 !important; text-decoration: none; transition: 0.3s; }
+.footer-links a:hover { color: #FFFFFF !important; padding-left: 5px; text-decoration: underline; }
+.border-secondary { border-color: rgba(255, 255, 255, 0.2) !important; }
+
+
+/* =========================================
+   12. RESPONSIVE DESIGN (Media Queries)
+========================================= */
+/* Tablet & Small Desktops */
 @media (max-width: 991px) {
-    /* Navbar collapse menu padding */
     .navbar-collapse {
         background-color: var(--primary-green);
         padding: 15px;
         border-radius: 10px;
         margin-top: 10px;
     }
+    .masonry-gallery {
+        column-count: 2;
+    }
 }
 
+/* Mobile Devices */
 @media (max-width: 768px) {
-    /* Logo scaling fix for mobile */
+    /* Navbar & Logo Mobile Fixes */
+    .custom-brand {
+        gap: 8px; 
+    }
     .nav-logo {
-        transform: scale(1.5); 
-        margin-left: 10px;
+        height: 42px !important; /* Perfect size for mobile to prevent overlapping */
+    }
+    .brand-title {
+        font-size: 1.1rem;
+        margin-bottom: 2px;
+    }
+    .brand-subtitle {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px; /* Reduced spacing so it fits on small screens */
     }
 
-    /* Hero section button fix for mobile */
+    /* Hero Section Fixes */
     .hero-buttons .btn {
         display: block;
         width: 100%;
@@ -740,23 +521,27 @@ body.dark-mode .map-section iframe {
         margin-right: 0 !important;
     }
 
-    /* About page responsive fixes */
+    /* About Section Fixes */
     .about-side-img {
         height: 300px;
         margin-top: 30px;
     }
-    
     .about-hero-section {
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
         padding-top: 20px;
     }
-
     .stats-banner {
         padding: 30px 15px;
     }
-
     .stats-banner h2 {
         font-size: 1.6rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 576px) {
+    .masonry-gallery {
+        column-count: 1;
     }
 }
