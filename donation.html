@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now | M.R Welfare Foundation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="asstes/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand custom-brand align-items-center" href="index.html">
+                <img class="nav-logo" src="asstes/image/logo.png" alt="Logo" title="M.R Welfare Foundation">
+                
+                <div class="brand-text-container d-flex flex-column justify-content-center">
+                    <span class="brand-title text-white">M.R WELFARE</span>
+                    <span class="brand-subtitle">FOUNDATION</span>
+                </div>
+            </a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-lang="nav_home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" data-lang="nav_about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html" data-lang="nav_projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html" data-lang="nav_blog">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html" data-lang="nav_gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="volunteer.html" data-lang="nav_volunteer">Volunteer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="nav_contact">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center ms-lg-3 gap-2 mt-3 mt-lg-0">
+                    <button id="theme-toggle" class="btn btn-outline-light rounded-circle" title="Toggle Dark/Light Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button id="lang-toggle" class="btn btn-outline-light fw-bold">বাংলা</button>
+                    <a class="btn btn-donate bg-white text-danger" href="donation.html" data-lang="nav_donate">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header d-flex align-items-center" style="background: linear-gradient(rgba(0, 106, 78, 0.85), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; height: 300px;">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold" data-lang="don_header_title">Make a Donation</h1>
+            <p class="lead mx-auto" style="max-width: 600px;" data-lang="don_header_sub">Your generosity can provide food, education, and medical care to those who need it the most.</p>
+        </div>
+    </header>
+
+    <section class="py-5 bg-light-alt theme-bg-alt">
+        <div class="container py-4">
+            <div class="row g-5">
+                
+                <div class="col-lg-7">
+                    <div class="card theme-card border-0 shadow-sm p-4 p-md-5 rounded-4 h-100">
+                        <h3 class="fw-bold theme-text mb-4" data-lang="don_amt_title">Choose Donation Amount</h3>
+                        
+                        <div class="row g-3 mb-4">
+                            <div class="col-6 col-md-3">
+                                <button class="btn btn-outline-success amount-btn w-100 fw-bold py-2">৳ 500</button>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <button class="btn btn-outline-success amount-btn active w-100 fw-bold py-2">৳ 1000</button>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <button class="btn btn-outline-success amount-btn w-100 fw-bold py-2">৳ 5000</button>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <input type="number" class="form-control amount-input text-center py-2 theme-input" placeholder="Custom" data-lang-placeholder="don_custom_amt">
+                            </div>
+                        </div>
+
+                        <h5 class="fw-bold theme-text mb-3" data-lang="don_cause">Select a Cause</h5>
+                        <select class="form-select theme-input mb-4 py-2">
+                            <option value="general" data-lang="don_cause_gen">General Fund (Where it's needed most)</option>
+                            <option value="education" data-lang="don_cause_edu">Education Support</option>
+                            <option value="medical" data-lang="don_cause_med">Medical Help</option>
+                            <option value="food" data-lang="don_cause_food">Food Distribution</option>
+                            <option value="disaster" data-lang="don_cause_disaster">Disaster Relief</option>
+                        </select>
+
+                        <h5 class="fw-bold theme-text mb-3" data-lang="don_personal_info">Personal Information</h5>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control theme-input py-2" placeholder="Full Name" data-lang-placeholder="don_name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control theme-input py-2" placeholder="Email Address" data-lang-placeholder="don_email">
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control theme-input py-2" placeholder="Phone Number" data-lang-placeholder="don_phone">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary-custom w-100 py-3 fs-5" data-lang="don_btn_submit">Proceed to Donate</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card theme-card border-0 shadow-sm p-4 p-md-5 rounded-4 h-100">
+                        <h3 class="fw-bold theme-text mb-4" data-lang="don_pay_methods_title">Offline Payment Methods</h3>
+                        <p class="theme-text-muted mb-4" data-lang="don_pay_desc">You can directly send your donation to the following accounts using Send Money or Cash In.</p>
+                        
+                        <div class="payment-box mb-4 p-3 rounded-3 border d-flex align-items-center">
+                            <div class="payment-icon bg-light rounded px-2 py-1 me-3">
+                                <span class="fw-bold" style="color: #E2136E; font-size: 1.2rem;">bKash</span>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1 theme-text" data-lang="don_bkash">bKash (Personal)</h5>
+                                <p class="mb-0 text-muted fs-5 fw-bold">017XXXXXXXX</p>
+                            </div>
+                        </div>
+
+                        <div class="payment-box mb-4 p-3 rounded-3 border d-flex align-items-center">
+                            <div class="payment-icon bg-light rounded px-2 py-1 me-3">
+                                <span class="fw-bold" style="color: #F7931E; font-size: 1.2rem;">Nagad</span>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1 theme-text" data-lang="don_nagad">Nagad (Personal)</h5>
+                                <p class="mb-0 text-muted fs-5 fw-bold">018XXXXXXXX</p>
+                            </div>
+                        </div>
+
+                        <div class="payment-box p-3 rounded-3 border d-flex align-items-center">
+                            <div class="payment-icon bg-light rounded px-2 py-1 me-3 text-primary">
+                                <i class="fa-solid fa-building-columns fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1 theme-text" data-lang="don_bank">Bank Account</h5>
+                                <p class="mb-1 text-muted small" data-lang="don_bank_name">Bank: Islami Bank Bangladesh PLC</p>
+                                <p class="mb-1 text-muted small" data-lang="don_bank_acc_name">A/C Name: M.R Welfare Foundation</p>
+                                <p class="mb-0 text-muted fw-bold">A/C No: 2050XXXXXXXXXXXXX</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-5 text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-3" data-lang="footer_title">M.R Welfare Foundation</h4>
+                    <p class="text-light" data-lang="footer_desc">Committed to creating sustainable social impact and spreading kindness, humanity, and support to make a better future for everyone.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3" data-lang="footer_quick_links">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="about.html" data-lang="nav_about">About Us</a></li>
+                        <li><a href="projects.html" data-lang="nav_projects">Our Projects</a></li>
+                        <li><a href="donation.html" data-lang="nav_donate">Donate</a></li>
+                        <li><a href="contact.html" data-lang="nav_contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3" data-lang="footer_contact_info">Contact Info</h5>
+                    <p><i class="fa-solid fa-location-dot me-2"></i> <span data-lang="footer_address">Dhaka, Bangladesh</span></p>
+                    <p><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880 1XXXXXXXXX</span></p>
+                    <p><i class="fa-solid fa-envelope me-2"></i> <span data-lang="footer_email">info@mrwelfare.org</span></p>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 border-secondary">
+            <div class="text-center">
+                <p class="mb-0" data-lang="footer_copyright">&copy; 2026 M.R Welfare Foundation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="asstes/js/script.js"></script>
+</body>
+</html>
