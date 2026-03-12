@@ -1,0 +1,436 @@
+/* =========================================
+   M.R WELFARE FOUNDATION - CUSTOM STYLES
+   Theme: Bangladesh Red & Green (Professional)
+========================================= */
+
+:root {
+    /* Red & Green Theme Colors */
+    --primary-green: #006A4E; /* Bangladesh Flag Deep Green */
+    --accent-red: #D32F2F;    /* Professional Crimson Red */
+    
+    /* Other Layout Colors */
+    --footer-bg: #6D8299;     /* Heather Blue (Always) */
+    --alternate-bg: #F2F5F3;  /* Very Light Greenish-White */
+    --main-bg: #FFFFFF;            
+    --text-color: #333333;
+    
+    /* Fonts */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --font-bangla: 'Noto Sans Bengali', sans-serif;
+}
+
+/* --- Dark Mode Variables --- */
+body.dark-mode {
+    --main-bg: #121212;
+    --alternate-bg: #1A221F; /* Very Dark Greenish-Black */
+    --text-color: #E0E0E0;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-body);
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* Bangla Font Setup */
+body.bangla-active { font-family: var(--font-bangla); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+body.bangla-active h1, body.bangla-active h2, body.bangla-active h3, body.bangla-active h4, body.bangla-active h5, body.bangla-active h6 {
+    font-family: var(--font-bangla);
+}
+
+/* --- Theme Backgrounds & Text Colors (For Smooth Transitions) --- */
+.theme-bg { background-color: var(--main-bg); transition: 0.4s; }
+.theme-bg-alt { background-color: var(--alternate-bg); transition: 0.4s; }
+.theme-text { color: var(--text-color) !important; transition: 0.4s; }
+.theme-text-muted { color: #6c757d !important; transition: 0.4s; }
+
+/* Text Colors */
+.text-primary-custom { color: var(--primary-green) !important; }
+.text-secondary-custom { color: var(--accent-red) !important; }
+.bg-light-alt { background-color: var(--alternate-bg); }
+
+/* Dark Mode Specific Adjustments */
+body.dark-mode .theme-bg-alt { background-color: var(--alternate-bg) !important; }
+body.dark-mode .theme-card { background-color: #242424 !important; }
+body.dark-mode .theme-text { color: #E0E0E0 !important; }
+body.dark-mode .theme-text-muted { color: #A0A0A0 !important; }
+
+/* Custom Buttons */
+.btn-primary-custom {
+    background-color: var(--primary-green);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--accent-red); 
+    color: #fff;
+}
+
+/* Donate Button */
+.btn-donate {
+    background-color: var(--accent-red);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 8px 20px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-donate:hover {
+    background-color: #B71C1C; 
+    color: #fff;
+}
+
+/* Navbar */
+.custom-navbar {
+    background-color: var(--primary-green);
+    padding: 15px 0; 
+    /* height: 75px; <--- এটি মুছে দেওয়া হয়েছে যাতে মোবাইলের মেনু ওপেন হতে পারে */
+}
+
+.nav-logo {
+    height: 45px; 
+    transform: scale(2.2); 
+    transform-origin: left center; 
+    width: auto;
+    object-fit: contain;
+    transition: 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link {
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.custom-navbar .nav-link:hover, 
+.custom-navbar .nav-link.active {
+    color: #fff;
+}
+
+/* Theme & Language Toggles */
+#theme-toggle, #lang-toggle {
+    border-color: rgba(255,255,255,0.5);
+    color: #fff;
+}
+
+#theme-toggle:hover, #lang-toggle:hover {
+    background-color: var(--accent-red);
+    border-color: var(--accent-red);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 106, 78, 0.75), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    height: 80vh;
+    min-height: 500px;
+}
+
+/* Services / Our Work */
+.service-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    background-color: var(--alternate-bg);
+    color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.service-card:hover .icon-box {
+    background-color: var(--primary-green);
+    color: #fff;
+}
+
+body.dark-mode .icon-box {
+    background-color: #333;
+}
+
+/* =========================================
+   ABOUT US PAGE SPECIFIC STYLES
+========================================= */
+
+/* Rounded Header */
+.about-hero-section {
+    background-color: var(--primary-green);
+    min-height: 250px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-top: 50px;
+}
+
+/* Yellow Highlight Underline */
+.highlight-underline {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.highlight-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 6px;
+    background-color: #F5A623; 
+    z-index: -1;
+    border-radius: 3px;
+}
+
+/* Side Image */
+.about-side-img {
+    border-radius: 20px;
+    object-fit: cover;
+    height: 450px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Stats Banner */
+.stats-banner {
+    background-color: var(--primary-green);
+    border-radius: 20px;
+    padding: 60px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-banner::before {
+    content: "\f004  \f004  \f004";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.03);
+    position: absolute;
+    top: -50px;
+    left: 10%;
+    letter-spacing: 150px;
+    pointer-events: none;
+}
+
+.stats-label {
+    color: #F5A623; 
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Feature Boxes */
+.feature-box {
+    padding: 30px;
+    border-radius: 16px;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.feature-box.active {
+    background-color: var(--main-bg);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark-mode .feature-box.active {
+    background-color: #242424;
+    border: 1px solid #333;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 106, 78, 0.1);
+    color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #A5D6A7;
+}
+
+/* =========================================
+   OUR PROJECTS PAGE SPECIFIC STYLES
+========================================= */
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--main-bg);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+}
+
+body.dark-mode .project-card {
+    background-color: #242424;
+}
+
+body.dark-mode .project-card:hover {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4) !important;
+}
+
+.project-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.1); 
+}
+
+.project-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-outline-primary-custom {
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    background: transparent;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-outline-primary-custom:hover {
+    background-color: var(--primary-green);
+    color: #fff;
+}
+
+body.dark-mode .btn-outline-primary-custom {
+    color: #fff;
+    border-color: #fff;
+}
+
+body.dark-mode .btn-outline-primary-custom:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+/* =========================================
+   FOOTER - Updated Color
+========================================= */
+.footer {
+    background-color: rgba(35, 69, 64, 1) !important; 
+    color: #ffffff !important;
+}
+
+body.dark-mode .footer h4, 
+body.dark-mode .footer h5, 
+body.dark-mode .footer p, 
+body.dark-mode .footer span,
+.footer h4, .footer h5, .footer p, .footer span {
+    color: #ffffff !important;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #E0E0E0 !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF !important;
+    padding-left: 5px;
+    text-decoration: underline;
+}
+
+.border-secondary {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (MOBILE & TABLET FIXES)
+========================================= */
+@media (max-width: 991px) {
+    /* Navbar collapse menu padding */
+    .navbar-collapse {
+        background-color: var(--primary-green);
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Logo scaling fix for mobile */
+    .nav-logo {
+        transform: scale(1.5); 
+        margin-left: 10px;
+    }
+
+    /* Hero section button fix for mobile */
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .hero-buttons .me-3 {
+        margin-right: 0 !important;
+    }
+
+    /* About page responsive fixes */
+    .about-side-img {
+        height: 300px;
+        margin-top: 30px;
+    }
+    
+    .about-hero-section {
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding-top: 20px;
+    }
+
+    .stats-banner {
+        padding: 30px 15px;
+    }
+
+    .stats-banner h2 {
+        font-size: 1.6rem;
+    }
+}
