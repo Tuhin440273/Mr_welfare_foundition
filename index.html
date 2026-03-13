@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.R Welfare Foundation | Home</title>
+    <link rel="icon" type="image/png" href="asstes/image/logo.png">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
@@ -143,51 +144,122 @@
         </div>
     </section>
 
-    <section class="services-section py-5 bg-light-alt theme-bg-alt">
-        <div class="container py-4">
+<section class="services-section py-5 position-relative" style="background: linear-gradient(rgba(0, 106, 78, 0.9), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;">
+        <div class="container py-5 position-relative z-1">
             <div class="text-center mb-5">
-                <h5 class="text-secondary-custom fw-bold" data-lang="work_tag">Our Work</h5>
-                <h2 class="text-primary-custom fw-bold theme-text" data-lang="work_title">How We Help</h2>
+                <h5 class="text-warning fw-bold" data-lang="work_tag">Our Work</h5>
+                <h2 class="text-white fw-bold" data-lang="work_title">How We Help</h2>
+                <p class="text-light mt-2" data-lang="work_click_hint">(Click on the cards to view details)</p>
             </div>
             <div class="row g-4">
+                
                 <div class="col-md-6 col-lg-3">
-                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card">
+                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card" data-bs-toggle="modal" data-bs-target="#eduModal" style="cursor: pointer;">
                         <div class="icon-box mx-auto mb-3"><i class="fa-solid fa-book-open"></i></div>
                         <h4 class="card-title text-primary-custom theme-text" data-lang="srv_edu_title">Education</h4>
-                        <p class="card-text text-muted theme-text-muted" data-lang="srv_edu_desc">Providing books,
-                            school fees, and essential support to underprivileged children.</p>
+                        <p class="card-text text-muted theme-text-muted" data-lang="srv_edu_desc">Providing books, school fees, and essential support to underprivileged children.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-3">
-                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card">
+                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card" data-bs-toggle="modal" data-bs-target="#medModal" style="cursor: pointer;">
                         <div class="icon-box mx-auto mb-3"><i class="fa-solid fa-notes-medical"></i></div>
-                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_med_title">Medical Help
-                        </h4>
-                        <p class="card-text text-muted theme-text-muted" data-lang="srv_med_desc">Organizing free
-                            medical camps, supplying medicines, and offering healthcare.</p>
+                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_med_title">Medical Help</h4>
+                        <p class="card-text text-muted theme-text-muted" data-lang="srv_med_desc">Organizing free medical camps, supplying medicines, and offering healthcare.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-3">
-                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card">
+                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card" data-bs-toggle="modal" data-bs-target="#foodModal" style="cursor: pointer;">
                         <div class="icon-box mx-auto mb-3"><i class="fa-solid fa-bowl-rice"></i></div>
-                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_food_title">Food
-                            Distribution</h4>
-                        <p class="card-text text-muted theme-text-muted" data-lang="srv_food_desc">Distributing
-                            nutritious food to the hungry and providing special Ramadan meals.</p>
+                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_food_title">Food Distribution</h4>
+                        <p class="card-text text-muted theme-text-muted" data-lang="srv_food_desc">Distributing nutritious food to the hungry and providing special Ramadan meals.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-3">
-                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card">
+                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card" data-bs-toggle="modal" data-bs-target="#disasterModal" style="cursor: pointer;">
                         <div class="icon-box mx-auto mb-3"><i class="fa-solid fa-house-chimney-crack"></i></div>
-                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_disaster_title">Disaster
-                            Relief</h4>
-                        <p class="card-text text-muted theme-text-muted" data-lang="srv_disaster_desc">Emergency
-                            response and relief materials during floods, storms, and natural disasters.</p>
+                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_disaster_title">Disaster Relief</h4>
+                        <p class="card-text text-muted theme-text-muted" data-lang="srv_disaster_desc">Emergency response and relief materials during floods, storms, and natural disasters.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="eduModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content theme-bg border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h3 class="modal-title fw-bold text-primary-custom" data-lang="srv_edu_title">Education Support</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Education">
+                    <p class="theme-text-muted fs-5" data-lang="modal_edu_detail">Every child deserves the right to education. Through this project, we provide free books, uniforms, school fees, and stationeries to children who cannot afford to go to school. Your support can help build a bright future for a child.</p>
+                </div>
+                <div class="modal-footer border-top-0 pt-0 justify-content-center">
+                    <a href="donation.html" class="btn btn-donate btn-lg px-5" data-lang="btn_donate_now">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="medModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content theme-bg border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h3 class="modal-title fw-bold text-primary-custom" data-lang="srv_med_title">Medical Help</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Medical">
+                    <p class="theme-text-muted fs-5" data-lang="modal_med_detail">Healthcare is a basic right, yet many die due to lack of treatment. We organize free health camps in rural areas, provide life-saving medicines, and sponsor surgeries for extremely poor patients. Stand with us to save lives.</p>
+                </div>
+                <div class="modal-footer border-top-0 pt-0 justify-content-center">
+                    <a href="donation.html" class="btn btn-donate btn-lg px-5" data-lang="btn_donate_now">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="foodModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content theme-bg border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h3 class="modal-title fw-bold text-primary-custom" data-lang="srv_food_title">Food Distribution</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Food">
+                    <p class="theme-text-muted fs-5" data-lang="modal_food_detail">No one should go to sleep hungry. We run daily food feeding programs for street children and destitute elderly people. During Ramadan, we provide month-long grocery packages to vulnerable families.</p>
+                </div>
+                <div class="modal-footer border-top-0 pt-0 justify-content-center">
+                    <a href="donation.html" class="btn btn-donate btn-lg px-5" data-lang="btn_donate_now">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="disasterModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content theme-bg border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h3 class="modal-title fw-bold text-primary-custom" data-lang="srv_disaster_title">Disaster Relief</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1527636605051-93e18f2f2759?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Disaster">
+                    <p class="theme-text-muted fs-5" data-lang="modal_disaster_detail">Bangladesh is prone to natural calamities like floods and cyclones. Our emergency response team quickly reaches affected areas to provide safe drinking water, dry food, emergency shelters, and medical aid.</p>
+                </div>
+                <div class="modal-footer border-top-0 pt-0 justify-content-center">
+                    <a href="donation.html" class="btn btn-donate btn-lg px-5" data-lang="btn_donate_now">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
  <div style="height: 15px; background-color: #F5A623; width: 100%;"></div>
     <footer class="footer py-5 text-white">
         <div class="container">

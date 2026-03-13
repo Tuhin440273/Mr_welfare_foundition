@@ -181,7 +181,13 @@ const translations = {
         contact_email_ph: "Your Email",
         contact_subject_ph: "Subject",
         contact_msg_ph: "Write your message here...",
-        contact_btn_submit: "Send Message"
+        contact_btn_submit: "Send Message",
+        work_click_hint: "(Click on the cards to view details)",
+        modal_edu_detail: "Every child deserves the right to education. Through this project, we provide free books, uniforms, school fees, and stationeries to children who cannot afford to go to school. Your support can help build a bright future for a child.",
+        modal_med_detail: "Healthcare is a basic right, yet many die due to lack of treatment. We organize free health camps in rural areas, provide life-saving medicines, and sponsor surgeries for extremely poor patients. Stand with us to save lives.",
+        modal_food_detail: "No one should go to sleep hungry. We run daily food feeding programs for street children and destitute elderly people. During Ramadan, we provide month-long grocery packages to vulnerable families.",
+        modal_disaster_detail: "Bangladesh is prone to natural calamities like floods and cyclones. Our emergency response team quickly reaches affected areas to provide safe drinking water, dry food, emergency shelters, and medical aid."
+
     },
     bn: {
         nav_home: "হোম", nav_about: "আমাদের সম্পর্কে", nav_projects: "প্রজেক্টসমূহ", 
@@ -321,7 +327,13 @@ const translations = {
         contact_email_ph: "আপনার ইমেইল",
         contact_subject_ph: "বিষয় (Subject)",
         contact_msg_ph: "আপনার বার্তা এখানে লিখুন...",
-        contact_btn_submit: "বার্তা পাঠান"
+        contact_btn_submit: "বার্তা পাঠান",
+        work_click_hint: "(বিস্তারিত জানতে কার্ডগুলোতে ক্লিক করুন)",
+        modal_edu_detail: "প্রতিটি শিশুর শিক্ষার অধিকার রয়েছে। এই প্রকল্পের মাধ্যমে, আমরা যেসব শিশু স্কুলে যেতে অক্ষম তাদের বিনামূল্যে বই, পোশাক, স্কুলের বেতন এবং শিক্ষা সামগ্রী প্রদান করি। আপনার সহায়তায় একটি শিশুর উজ্জ্বল ভবিষ্যৎ গড়তে সাহায্য করতে পারে।",
+        modal_med_detail: "স্বাস্থ্যসেবা একটি মৌলিক অধিকার, তবুও অনেকেই চিকিৎসার অভাবে মারা যায়। আমরা গ্রামাঞ্চলে বিনামূল্যে স্বাস্থ্য ক্যাম্পের আয়োজন করি, জীবন রক্ষাকারী ওষুধ সরবরাহ করি এবং অত্যন্ত দরিদ্র রোগীদের অস্ত্রোপচারের খরচ বহন করি। জীবন বাঁচাতে আমাদের পাশে দাঁড়ান।",
+        modal_food_detail: "কেউ যেন ক্ষুধার্ত অবস্থায় না ঘুমায়। আমরা পথশিশু এবং অসহায় বয়স্ক মানুষের জন্য প্রতিদিন খাদ্য বিতরণ কর্মসূচি পরিচালনা করি। রমজান মাসে আমরা দুর্বল পরিবারগুলোকে মাসব্যাপী মুদি সামগ্রী সরবরাহ করি।",
+        modal_disaster_detail: "বাংলাদেশ বন্যা ও ঘূর্ণিঝড়ের মতো প্রাকৃতিক দুর্যোগপ্রবণ এলাকা। আমাদের জরুরি সহায়তা দল দ্রুত ক্ষতিগ্রস্ত এলাকায় পৌঁছে নিরাপদ পানীয় জল, শুকনো খাবার, জরুরি আশ্রয় এবং চিকিৎসা সহায়তা প্রদান করে।"
+        
     }
 };
 
