@@ -105,11 +105,11 @@ body.dark-mode .theme-card { background-color: #242424 !important; }
    4. HEADER, NAVBAR & BRAND
 ========================================= */
 .custom-navbar {
-    background-color: var(--primary-green);
+    background-color: rgba(35, 69, 64, 0.95) !important;
     padding: 8px 0 !important;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     z-index: 1030; 
-    position: sticky; /* এটি ন্যাভবারকে লাফাতে দেবে না */
+    position: sticky; 
     top: 0;
 }
 
@@ -188,7 +188,7 @@ body.dark-mode .theme-card { background-color: #242424 !important; }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    animation: zoomEffect 10s infinite alternate; /* একটি সুন্দর জুম এনিমেশন */
+    animation: zoomEffect 10s infinite alternate; 
 }
 
 @keyframes zoomEffect {
