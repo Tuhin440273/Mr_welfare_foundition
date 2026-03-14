@@ -320,38 +320,50 @@ body.dark-mode .feature-box.active {
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 /* =========================================
-   MISSION & VISION IMAGE CARDS (FIXED)
+   MISSION & VISION BOTTOM TEXT CARDS
 ========================================= */
 .mission-vision-card {
-    min-height: 400px; /* কার্ডের ন্যূনতম উচ্চতা */
+    min-height: 350px;
     background-size: cover !important;
     background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-color: #2c3e50; /* যদি কোনো কারণে ছবি লোড না হয়, তবে এই সুন্দর কালারটি দেখাবে */
+    background-color: #2c3e50;
     transition: transform 0.4s ease;
+    cursor: pointer; /* কার্ডে মাউস নিলে কার্সর পয়েন্টার হবে */
 }
+
 .mission-vision-card:hover {
     transform: translateY(-8px);
 }
 
-/* ওভারলে এখন পুরো কার্ড জুড়ে থাকবে */
-.card-overlay {
+/* ওভারলে এখন শুধু নিচ থেকে উপরের দিকে অল্প উঠবে (Gradual Fade) */
+.card-overlay-bottom {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
-    transition: background 0.4s ease;
-    z-index: 1; /* ওভারলেকে নিচে রাখা হলো */
+    bottom: 0; left: 0; right: 0;
+    height: 70%; /* কার্ডের নিচের ৭০% অংশে শ্যাডো থাকবে, ওপরের ৩০% পরিষ্কার থাকবে */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+    transition: height 0.4s ease, background 0.4s ease;
+    z-index: 1;
 }
 
-/* কার্ডে মাউস রাখলে ওভারলের রঙ সবুজ হবে */
-.mission-vision-card:hover .card-overlay {
-    background: linear-gradient(to bottom, rgba(0, 106, 78, 0.4) 0%, rgba(0, 106, 78, 0.95) 100%);
+/* হোভার করলে ওভারলে আরেকটু ওপরে উঠবে এবং হালকা সবুজ হবে */
+.mission-vision-card:hover .card-overlay-bottom {
+    height: 85%;
+    background: linear-gradient(to top, rgba(0, 106, 78, 0.95) 0%, rgba(0, 106, 78, 0.6) 50%, rgba(0,0,0,0) 100%);
 }
 
-/* লেখা এবং বাটনগুলো যেন ওভারলের ওপরে থাকে */
 .card-content {
-    position: relative;
-    z-index: 2; 
+    z-index: 2;
+}
+
+/* ডানদিকের গোল বাটনটির অ্যানিমেশন */
+.read-more-btn {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.mission-vision-card:hover .read-more-btn {
+    transform: translateX(-5px); /* হোভার করলে বাটনটি একটু বাম দিকে নড়ে উঠবে */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
 }
 /* =========================================
    TEAM CARD STYLES (With Image Hover Zoom)

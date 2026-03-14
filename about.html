@@ -75,26 +75,34 @@
 
 <section class="py-5 bg-light-alt theme-bg-alt">
         <div class="container py-4">
-            <div class="row g-4">
+            <div class="row g-4 h-100">
                 
                 <div class="col-md-6">
                     <div class="card border-0 shadow-lg rounded-4 overflow-hidden position-relative mission-vision-card" style="background-image: url('asstes/image/mision.png');">
-                        <div class="card-overlay p-4 p-md-5 d-flex flex-column justify-content-end h-100 text-center">
-                            <div class="icon-box mx-auto mb-3" style="background-color: var(--primary-green); width: 60px; height: 60px; font-size: 25px; color: white;"><i class="fa-solid fa-bullseye"></i></div>
-                            <h2 class="fw-bold text-white mb-3" data-lang="ab_mission_title">Our Mission</h2>
-                            <p class="text-light mb-4" data-lang="ab_mission_short" style="opacity: 0.9;">To empower underprivileged communities through education, healthcare, and sustainable livelihood programs...</p>
-                            <button class="btn btn-primary-custom align-self-center mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#missionModal" data-lang="btn_read_more">Read More <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                        <div class="card-overlay-bottom"></div>
+                        <div class="card-content d-flex flex-column justify-content-end p-4 h-100 w-100 position-absolute bottom-0">
+                            <div class="text-start pe-5 mb-2">
+                                <h2 class="fw-bold text-white mb-2" data-lang="ab_mission_title">Our Mission</h2>
+                                <p class="text-light mb-0 fs-6" data-lang="ab_mission_short" style="opacity: 0.9; line-height: 1.5;">To empower underprivileged communities through education, healthcare, and sustainable livelihood programs...</p>
+                            </div>
+                            <button class="btn btn-sm position-absolute bottom-0 end-0 m-4 rounded-circle d-flex align-items-center justify-content-center text-white read-more-btn" style="background-color: var(--primary-green); width: 45px; height: 45px; transition: 0.3s;" data-bs-toggle="modal" data-bs-target="#missionModal" title="Read More">
+                                <i class="fa-solid fa-arrow-right fs-5"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="card border-0 shadow-lg rounded-4 overflow-hidden position-relative mission-vision-card" style="background-image: url('asstes/image/vision.png');">
-                        <div class="card-overlay p-4 p-md-5 d-flex flex-column justify-content-end h-100 text-center">
-                            <div class="icon-box mx-auto mb-3" style="background-color: #F5A623; width: 60px; height: 60px; font-size: 25px; color: white;"><i class="fa-solid fa-lightbulb"></i></div>
-                            <h2 class="fw-bold text-white mb-3" data-lang="ab_vision_title">Our Vision</h2>
-                            <p class="text-light mb-4" data-lang="ab_vision_short" style="opacity: 0.9;">To envision a poverty-free, educated, and compassionate society where every individual has access to...</p>
-                            <button class="btn btn-primary-custom align-self-center mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#visionModal" data-lang="btn_read_more">Read More <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                        <div class="card-overlay-bottom"></div>
+                        <div class="card-content d-flex flex-column justify-content-end p-4 h-100 w-100 position-absolute bottom-0">
+                            <div class="text-start pe-5 mb-2">
+                                <h2 class="fw-bold text-white mb-2" data-lang="ab_vision_title">Our Vision</h2>
+                                <p class="text-light mb-0 fs-6" data-lang="ab_vision_short" style="opacity: 0.9; line-height: 1.5;">To envision a poverty-free, educated, and compassionate society where every individual has access to...</p>
+                            </div>
+                            <button class="btn btn-sm position-absolute bottom-0 end-0 m-4 rounded-circle d-flex align-items-center justify-content-center text-white read-more-btn" style="background-color: #F5A623; width: 45px; height: 45px; transition: 0.3s;" data-bs-toggle="modal" data-bs-target="#visionModal" title="Read More">
+                                <i class="fa-solid fa-arrow-right fs-5"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
