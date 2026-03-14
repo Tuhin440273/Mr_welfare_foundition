@@ -24,37 +24,44 @@
         <div class="container">
             <a class="navbar-brand custom-brand align-items-center" href="index.html">
                 <img class="nav-logo" src="asstes/image/logo.png" alt="Logo" title="M.R Welfare Foundation">
-                
                 <div class="brand-text-container d-flex flex-column justify-content-center">
                     <span class="brand-title text-white">M.R WELFARE</span>
                     <span class="brand-subtitle">FOUNDATION</span>
                 </div>
             </a>
 
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars text-white"></i>
+            <button class="navbar-toggler text-white border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars fa-lg text-white"></i>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html" data-lang="nav_home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="index.html" data-lang="nav_home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html" data-lang="nav_about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html" data-lang="nav_projects">Projects</a>
+                    <li class="nav-item"><a class="nav-link" href="projects.html" data-lang="nav_projects">Projects</a></li>
+                    
+                    <li class="nav-item dropdown custom-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-lang="nav_media">Media</a>
+                        <ul class="dropdown-menu border-0 shadow-lg rounded-3">
+                            <li><a class="dropdown-item py-2" href="gallery.html" data-lang="nav_gallery"><i class="fa-regular fa-image me-2 text-secondary-custom"></i> Gallery</a></li>
+                            <li><a class="dropdown-item py-2" href="blog.html" data-lang=""><i class="fa-regular  text-secondary-custom"></i> News & Blog</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html" data-lang="nav_gallery">Gallery</a>
+
+                    <li class="nav-item dropdown custom-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="involvedDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-lang="nav_get_involved">Get Involved</a>
+                        <ul class="dropdown-menu border-0 shadow-lg rounded-3">
+                            <li><a class="dropdown-item py-2" href="volunteer.html" data-lang="nav_volunteer"><i class="fa-solid fa-hand-holding-heart me-2 text-secondary-custom"></i> Volunteer</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item py-2 fw-bold text-primary-custom" href="donation.html" data-lang="nav_donate"><i class="fa-solid fa-circle-dollar-to-slot me-2"></i> Donate Now</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html" data-lang="nav_blog">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="volunteer.html"
-                            data-lang="nav_volunteer">Volunteer</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="nav_contact">Contact</a>
-                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="nav_contact">Contact</a></li>
                 </ul>
 
-                <div class="d-flex align-items-center ms-lg-3 gap-2 mt-3 mt-lg-0">
-                    <button id="theme-toggle" class="btn btn-outline-light rounded-circle"
-                        title="Toggle Dark/Light Mode">
-                        <i class="fa-solid fa-moon"></i>
-                    </button>
+                <div class="d-flex align-items-center ms-lg-3 gap-2 mt-3 mt-lg-0 pb-3 pb-lg-0">
+                    <button id="theme-toggle" class="btn btn-outline-light rounded-circle" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
                     <button id="lang-toggle" class="btn btn-outline-light fw-bold">বাংলা</button>
                     <a class="btn btn-donate" href="donation.html" data-lang="nav_donate">Donate Now</a>
                 </div>
@@ -62,49 +69,67 @@
         </div>
     </nav>
 
-<header id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+    
+
+    <header id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
 
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="4000">
-                <div class="slide-image" style="background-image: linear-gradient(rgba(0, 106, 78, 0.7), rgba(0, 0, 0, 0.7)), url('asstes/image/bacground.png');"></div>
-                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-                    <div class="container text-center">
-                        <h1 class="display-3 fw-bold text-white mb-4" data-lang="slide_1_title">Helping People, Building a Better Future</h1>
-                        <p class="lead text-white mb-5 mx-auto" style="max-width: 700px;" data-lang="slide_1_desc">Join hands with us to support underprivileged and vulnerable communities across Bangladesh.</p>
-                        <div class="hero-buttons">
-                            <a href="donation.html" class="btn btn-donate btn-lg me-md-3 px-4 py-2" data-lang="btn_donate_now">Donate Now</a>
-                            <a href="volunteer.html" class="btn btn-outline-light btn-lg px-4 py-2 mt-3 mt-md-0" data-lang="btn_join_us">Join Us</a>
-                        </div>
-                    </div>
+                <div class="slide-image"
+                    style="background-image: linear-gradient(rgba(0, 106, 78, 0.7), rgba(0, 0, 0, 0.7)), url('asstes/image/bacground.png');">
                 </div>
-            </div>
-            
-            <div class="carousel-item" data-bs-interval="4000">
-                <div class="slide-image" style="background-image: linear-gradient(rgba(0, 106, 78, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <div class="container text-center">
-                        <h1 class="display-3 fw-bold text-white mb-4" data-lang="slide_2_title">Zero Hunger Initiative</h1>
-                        <p class="lead text-white mb-5 mx-auto" style="max-width: 700px;" data-lang="slide_2_desc">We strive to ensure that no one goes to sleep on an empty stomach.</p>
+                        <h1 class="display-3 fw-bold text-white mb-4" data-lang="slide_1_title">Helping People, Building
+                            a Better Future</h1>
+                        <p class="lead text-white mb-5 mx-auto" style="max-width: 700px;" data-lang="slide_1_desc">Join
+                            hands with us to support underprivileged and vulnerable communities across Bangladesh.</p>
                         <div class="hero-buttons">
-                            <a href="projects.html" class="btn btn-donate btn-lg px-4 py-2" data-lang="btn_our_work">Our Work</a>
+                            <a href="donation.html" class="btn btn-donate btn-lg me-md-3 px-4 py-2"
+                                data-lang="btn_donate_now">Donate Now</a>
+                            <a href="volunteer.html" class="btn btn-outline-light btn-lg px-4 py-2 mt-3 mt-md-0"
+                                data-lang="btn_join_us">Join Us</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="carousel-item" data-bs-interval="4000">
-                <div class="slide-image" style="background-image: linear-gradient(rgba(0, 106, 78, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                <div class="slide-image"
+                    style="background-image: linear-gradient(rgba(0, 106, 78, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                </div>
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                    <div class="container text-center">
+                        <h1 class="display-3 fw-bold text-white mb-4" data-lang="slide_2_title">Zero Hunger Initiative
+                        </h1>
+                        <p class="lead text-white mb-5 mx-auto" style="max-width: 700px;" data-lang="slide_2_desc">We
+                            strive to ensure that no one goes to sleep on an empty stomach.</p>
+                        <div class="hero-buttons">
+                            <a href="projects.html" class="btn btn-donate btn-lg px-4 py-2" data-lang="btn_our_work">Our
+                                Work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="4000">
+                <div class="slide-image"
+                    style="background-image: linear-gradient(rgba(0, 106, 78, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                </div>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <div class="container text-center">
                         <h1 class="display-3 fw-bold text-white mb-4" data-lang="slide_3_title">Education for All</h1>
-                        <p class="lead text-white mb-5 mx-auto" style="max-width: 700px;" data-lang="slide_3_desc">Empowering the next generation through free education and learning materials.</p>
+                        <p class="lead text-white mb-5 mx-auto" style="max-width: 700px;" data-lang="slide_3_desc">
+                            Empowering the next generation through free education and learning materials.</p>
                         <div class="hero-buttons">
-                            <a href="donation.html" class="btn btn-donate btn-lg px-4 py-2" data-lang="btn_donate_now">Donate Now</a>
+                            <a href="donation.html" class="btn btn-donate btn-lg px-4 py-2"
+                                data-lang="btn_donate_now">Donate Now</a>
                         </div>
                     </div>
                 </div>
@@ -144,7 +169,8 @@
         </div>
     </section>
 
-<section class="services-section py-5 position-relative" style="background: linear-gradient(rgba(0, 106, 78, 0.9), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;">
+    <section class="services-section py-5 position-relative"
+        style="background: linear-gradient(rgba(0, 106, 78, 0.9), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;">
         <div class="container py-5 position-relative z-1">
             <div class="text-center mb-5">
                 <h5 class="text-warning fw-bold" data-lang="work_tag">Our Work</h5>
@@ -152,36 +178,47 @@
                 <p class="text-light mt-2" data-lang="work_click_hint">(Click on the cards to view details)</p>
             </div>
             <div class="row g-4">
-                
+
                 <div class="col-md-6 col-lg-3">
-                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card" data-bs-toggle="modal" data-bs-target="#eduModal" style="cursor: pointer;">
+                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card"
+                        data-bs-toggle="modal" data-bs-target="#eduModal" style="cursor: pointer;">
                         <div class="icon-box mx-auto mb-3"><i class="fa-solid fa-book-open"></i></div>
                         <h4 class="card-title text-primary-custom theme-text" data-lang="srv_edu_title">Education</h4>
-                        <p class="card-text text-muted theme-text-muted" data-lang="srv_edu_desc">Providing books, school fees, and essential support to underprivileged children.</p>
+                        <p class="card-text text-muted theme-text-muted" data-lang="srv_edu_desc">Providing books,
+                            school fees, and essential support to underprivileged children.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card" data-bs-toggle="modal" data-bs-target="#medModal" style="cursor: pointer;">
+                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card"
+                        data-bs-toggle="modal" data-bs-target="#medModal" style="cursor: pointer;">
                         <div class="icon-box mx-auto mb-3"><i class="fa-solid fa-notes-medical"></i></div>
-                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_med_title">Medical Help</h4>
-                        <p class="card-text text-muted theme-text-muted" data-lang="srv_med_desc">Organizing free medical camps, supplying medicines, and offering healthcare.</p>
+                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_med_title">Medical Help
+                        </h4>
+                        <p class="card-text text-muted theme-text-muted" data-lang="srv_med_desc">Organizing free
+                            medical camps, supplying medicines, and offering healthcare.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card" data-bs-toggle="modal" data-bs-target="#foodModal" style="cursor: pointer;">
+                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card"
+                        data-bs-toggle="modal" data-bs-target="#foodModal" style="cursor: pointer;">
                         <div class="icon-box mx-auto mb-3"><i class="fa-solid fa-bowl-rice"></i></div>
-                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_food_title">Food Distribution</h4>
-                        <p class="card-text text-muted theme-text-muted" data-lang="srv_food_desc">Distributing nutritious food to the hungry and providing special Ramadan meals.</p>
+                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_food_title">Food
+                            Distribution</h4>
+                        <p class="card-text text-muted theme-text-muted" data-lang="srv_food_desc">Distributing
+                            nutritious food to the hungry and providing special Ramadan meals.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card" data-bs-toggle="modal" data-bs-target="#disasterModal" style="cursor: pointer;">
+                    <div class="card service-card h-100 text-center p-4 shadow-sm border-0 theme-card"
+                        data-bs-toggle="modal" data-bs-target="#disasterModal" style="cursor: pointer;">
                         <div class="icon-box mx-auto mb-3"><i class="fa-solid fa-house-chimney-crack"></i></div>
-                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_disaster_title">Disaster Relief</h4>
-                        <p class="card-text text-muted theme-text-muted" data-lang="srv_disaster_desc">Emergency response and relief materials during floods, storms, and natural disasters.</p>
+                        <h4 class="card-title text-primary-custom theme-text" data-lang="srv_disaster_title">Disaster
+                            Relief</h4>
+                        <p class="card-text text-muted theme-text-muted" data-lang="srv_disaster_desc">Emergency
+                            response and relief materials during floods, storms, and natural disasters.</p>
                     </div>
                 </div>
 
@@ -197,8 +234,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Education">
-                    <p class="theme-text-muted fs-5" data-lang="modal_edu_detail">Every child deserves the right to education. Through this project, we provide free books, uniforms, school fees, and stationeries to children who cannot afford to go to school. Your support can help build a bright future for a child.</p>
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;"
+                        alt="Education">
+                    <p class="theme-text-muted fs-5" data-lang="modal_edu_detail">Every child deserves the right to
+                        education. Through this project, we provide free books, uniforms, school fees, and stationeries
+                        to children who cannot afford to go to school. Your support can help build a bright future for a
+                        child.</p>
                 </div>
                 <div class="modal-footer border-top-0 pt-0 justify-content-center">
                     <a href="donation.html" class="btn btn-donate btn-lg px-5" data-lang="btn_donate_now">Donate Now</a>
@@ -215,8 +257,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Medical">
-                    <p class="theme-text-muted fs-5" data-lang="modal_med_detail">Healthcare is a basic right, yet many die due to lack of treatment. We organize free health camps in rural areas, provide life-saving medicines, and sponsor surgeries for extremely poor patients. Stand with us to save lives.</p>
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Medical">
+                    <p class="theme-text-muted fs-5" data-lang="modal_med_detail">Healthcare is a basic right, yet many
+                        die due to lack of treatment. We organize free health camps in rural areas, provide life-saving
+                        medicines, and sponsor surgeries for extremely poor patients. Stand with us to save lives.</p>
                 </div>
                 <div class="modal-footer border-top-0 pt-0 justify-content-center">
                     <a href="donation.html" class="btn btn-donate btn-lg px-5" data-lang="btn_donate_now">Donate Now</a>
@@ -229,12 +274,16 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content theme-bg border-0 shadow-lg">
                 <div class="modal-header border-bottom-0 pb-0">
-                    <h3 class="modal-title fw-bold text-primary-custom" data-lang="srv_food_title">Food Distribution</h3>
+                    <h3 class="modal-title fw-bold text-primary-custom" data-lang="srv_food_title">Food Distribution
+                    </h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Food">
-                    <p class="theme-text-muted fs-5" data-lang="modal_food_detail">No one should go to sleep hungry. We run daily food feeding programs for street children and destitute elderly people. During Ramadan, we provide month-long grocery packages to vulnerable families.</p>
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Food">
+                    <p class="theme-text-muted fs-5" data-lang="modal_food_detail">No one should go to sleep hungry. We
+                        run daily food feeding programs for street children and destitute elderly people. During
+                        Ramadan, we provide month-long grocery packages to vulnerable families.</p>
                 </div>
                 <div class="modal-footer border-top-0 pt-0 justify-content-center">
                     <a href="donation.html" class="btn btn-donate btn-lg px-5" data-lang="btn_donate_now">Donate Now</a>
@@ -247,12 +296,16 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content theme-bg border-0 shadow-lg">
                 <div class="modal-header border-bottom-0 pb-0">
-                    <h3 class="modal-title fw-bold text-primary-custom" data-lang="srv_disaster_title">Disaster Relief</h3>
+                    <h3 class="modal-title fw-bold text-primary-custom" data-lang="srv_disaster_title">Disaster Relief
+                    </h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="https://images.unsplash.com/photo-1527636605051-93e18f2f2759?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Disaster">
-                    <p class="theme-text-muted fs-5" data-lang="modal_disaster_detail">Bangladesh is prone to natural calamities like floods and cyclones. Our emergency response team quickly reaches affected areas to provide safe drinking water, dry food, emergency shelters, and medical aid.</p>
+                    <img src="https://images.unsplash.com/photo-1527636605051-93e18f2f2759?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        class="img-fluid rounded-4 mb-4 w-100" style="height: 300px; object-fit: cover;" alt="Disaster">
+                    <p class="theme-text-muted fs-5" data-lang="modal_disaster_detail">Bangladesh is prone to natural
+                        calamities like floods and cyclones. Our emergency response team quickly reaches affected areas
+                        to provide safe drinking water, dry food, emergency shelters, and medical aid.</p>
                 </div>
                 <div class="modal-footer border-top-0 pt-0 justify-content-center">
                     <a href="donation.html" class="btn btn-donate btn-lg px-5" data-lang="btn_donate_now">Donate Now</a>
@@ -260,14 +313,28 @@
             </div>
         </div>
     </div>
- <div style="height: 15px; background-color: #F5A623; width: 100%;"></div>
+    <div style="height: 15px; background-color: #F5A623; width: 100%;"></div>
     <footer class="footer py-5 text-white">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h4 class="fw-bold mb-3" data-lang="footer_title">M.R Welfare Foundation</h4>
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none mb-4">
+                        <img src="asstes/image/logo.png" alt="Logo" style="height: 55px; width: auto; object-fit: contain; margin-right: 12px;">
+                        <div class="d-flex flex-column justify-content-center">
+                            <span class="text-white fw-bold" style="font-size: 1.3rem; letter-spacing: 1px; font-family: var(--font-heading); line-height: 1;">M.R WELFARE</span>
+                            <span style="color: var(--accent-red); font-size: 0.8rem; font-weight: 700; letter-spacing: 3.5px; font-family: var(--font-heading); line-height: 1; margin-top: 4px;">FOUNDATION</span>
+                        </div>
+                    </a>
+                   
                     <p class="text-light" data-lang="footer_desc">Committed to creating sustainable social impact and
                         spreading kindness, humanity, and support to make a better future for everyone.</p>
+                    <h5 class="fw-bold theme-text mt-5 mb-3" data-lang="contact_social">Follow Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-4">
                     <h5 class="fw-bold mb-3" data-lang="footer_quick_links">Quick Links</h5>
@@ -280,10 +347,16 @@
                 </div>
                 <div class="col-lg-4">
                     <h5 class="fw-bold mb-3" data-lang="footer_contact_info">Contact Info</h5>
-                    <p><i class="fa-solid fa-location-dot me-2"></i> <span data-lang="footer_address">Dhaka,
-                            Bangladesh</span></p>
-                    <p><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880 1818861685</span></p>
-                    <p><i class="fa-solid fa-envelope me-2"></i> <span
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-location-dot me-2"></i> <span
+                            data-lang="footer_address"> kha-12/2,(3rd Floor), progoti Soroni, Shajadpur,
+                            Gulshan,Dhaka-1212, Bangladesh</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880
+                            1818861685</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880
+                            1714962854</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880
+                            1813205962</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-envelope me-2"></i> <span
                             data-lang="footer_email">info@mrwelfare.org</span></p>
                 </div>
             </div>

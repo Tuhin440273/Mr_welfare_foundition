@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | M.R Welfare Foundation</title>
+    <link rel="icon" type="image/png" href="asstes/image/logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,7 +12,7 @@
     
     <link rel="stylesheet" href="asstes/css/style.css">
 </head>
-<body>
+<body class="theme-bg">
 
     <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
         <div class="container">
@@ -54,89 +55,230 @@
         </div>
     </header>
 
-    <section class="py-5 mt-4 theme-bg-alt">
+    <section class="py-5 mt-4 theme-bg">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 pe-lg-5 mb-5 mb-lg-0">
                     <h2 class="fw-bold mb-4 theme-text">
                         <span class="highlight-underline" data-lang="ab_title">About Us</span>
                     </h2>
-                    <h5 class="fw-bold mb-3 theme-text" data-lang="ab_subtitle">Embracing Humanity: A Tale of Warmth and True Support</h5>
-                    <p class="theme-text-muted mb-4" data-lang="ab_desc">With a caring heart and open arms, we strive to create a nurturing environment where individuals can find solace, understanding, and the strength to overcome life's challenges. Through genuine connections and unwavering dedication, we aim to make a positive impact, uplifting the spirits of those in need and fostering a sense of belonging within our community.</p>
+                    <h5 class="fw-bold mb-3 text-secondary-custom" data-lang="ab_subtitle">Embracing Humanity: A Tale of Warmth and True Support</h5>
+                    <p class="theme-text-muted mb-4" data-lang="ab_desc" style="line-height: 1.8;">With a caring heart and open arms, we strive to create a nurturing environment where individuals can find solace, understanding, and the strength to overcome life's challenges. Through genuine connections and unwavering dedication, we aim to make a positive impact, uplifting the spirits of those in need and fostering a sense of belonging within our community.</p>
                     <a href="contact.html" class="btn btn-primary-custom" data-lang="ab_btn">ABOUT US</a>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Holding Hands" class="img-fluid about-side-img shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Holding Hands" class="img-fluid about-side-img shadow-lg border border-3 border-success">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-4 theme-bg">
-        <div class="container">
-            <div class="stats-banner shadow-lg">
-                <div class="row text-center g-4">
-                    <div class="col-6 col-md-3">
-                        <h2 class="fw-bold text-white mb-1">৳50L+</h2>
-                        <p class="stats-label mb-0" data-lang="stat_1">RAISED DONATIONS</p>
+<section class="py-5 bg-light-alt theme-bg-alt">
+        <div class="container py-4">
+            <div class="row g-4">
+                
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden position-relative mission-vision-card" style="background-image: url('asstes/image/mision.png');">
+                        <div class="card-overlay p-4 p-md-5 d-flex flex-column justify-content-end h-100 text-center">
+                            <div class="icon-box mx-auto mb-3" style="background-color: var(--primary-green); width: 60px; height: 60px; font-size: 25px; color: white;"><i class="fa-solid fa-bullseye"></i></div>
+                            <h2 class="fw-bold text-white mb-3" data-lang="ab_mission_title">Our Mission</h2>
+                            <p class="text-light mb-4" data-lang="ab_mission_short" style="opacity: 0.9;">To empower underprivileged communities through education, healthcare, and sustainable livelihood programs...</p>
+                            <button class="btn btn-primary-custom align-self-center mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#missionModal" data-lang="btn_read_more">Read More <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                        </div>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <h2 class="fw-bold text-white mb-1">300K</h2>
-                        <p class="stats-label mb-0" data-lang="stat_2">SAVING ONES</p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden position-relative mission-vision-card" style="background-image: url('asstes/image/vision.png');">
+                        <div class="card-overlay p-4 p-md-5 d-flex flex-column justify-content-end h-100 text-center">
+                            <div class="icon-box mx-auto mb-3" style="background-color: #F5A623; width: 60px; height: 60px; font-size: 25px; color: white;"><i class="fa-solid fa-lightbulb"></i></div>
+                            <h2 class="fw-bold text-white mb-3" data-lang="ab_vision_title">Our Vision</h2>
+                            <p class="text-light mb-4" data-lang="ab_vision_short" style="opacity: 0.9;">To envision a poverty-free, educated, and compassionate society where every individual has access to...</p>
+                            <button class="btn btn-primary-custom align-self-center mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#visionModal" data-lang="btn_read_more">Read More <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                        </div>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <h2 class="fw-bold text-white mb-1">1M+</h2>
-                        <p class="stats-label mb-0" data-lang="stat_3">COMMUNITY</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="modal fade" id="missionModal" tabindex="-1" aria-labelledby="missionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content theme-bg border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="modal-header border-0 bg-light-alt theme-bg-alt pb-0 pt-4 px-4">
+                    <h3 class="modal-title fw-bold text-primary-custom" id="missionModalLabel" data-lang="ab_mission_title">Our Mission</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-3">
+                    <img src="asstes/image/mision.png" alt="Mission" class="img-fluid rounded-3 mb-4 w-100" style="height: 300px; object-fit: cover;">
+                    <p class="theme-text-muted fs-5" style="line-height: 1.8;" data-lang="ab_mission_long">Our ultimate mission is to empower underprivileged and marginalized communities through comprehensive education, accessible healthcare, and sustainable livelihood programs. We firmly believe that every individual deserves a life of dignity, respect, and equal opportunities. By creating supportive environments and providing necessary resources, we aim to break the cycle of poverty and build a foundation where future generations can thrive and lead independent, successful lives.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="visionModal" tabindex="-1" aria-labelledby="visionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content theme-bg border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="modal-header border-0 bg-light-alt theme-bg-alt pb-0 pt-4 px-4">
+                    <h3 class="modal-title fw-bold text-warning" id="visionModalLabel" data-lang="ab_vision_title">Our Vision</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-3">
+                    <img src="asstes/image/vision.png" alt="Vision" class="img-fluid rounded-3 mb-4 w-100" style="height: 300px; object-fit: cover;">
+                    <p class="theme-text-muted fs-5" style="line-height: 1.8;" data-lang="ab_vision_long">We envision a world that is poverty-free, highly educated, and deeply compassionate. A society where no one goes to bed hungry, where every child has access to quality education regardless of their background, and where basic human rights are guaranteed for all. We strive to create a global community driven by empathy and mutual support, ensuring that every human being has a fair chance to reach their highest potential and contribute positively to the world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="py-5 theme-bg">
+        <div class="container py-4">
+            <div class="row align-items-center theme-card rounded-4 p-4 p-md-5 shadow-sm border" style="border-color: rgba(0,0,0,0.05) !important;">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <img src="asstes/image/oner.jpeg" alt="Founder" class="img-fluid rounded-circle border border-4 border-success shadow" style="width: 220px; height: 220px; object-fit: cover;">
+                    <h4 class="fw-bold mt-4 theme-text" data-lang="ab_founder_name">Abdul Motaleb Moien</h4>
+                    <p class="text-secondary-custom fw-bold mb-0" data-lang="ab_founder_title">Founder & Chairman</p>
+                </div>
+                <div class="col-lg-8 ps-lg-5 text-center text-lg-start">
+                    <i class="fa-solid fa-quote-left fa-3x text-muted opacity-25 mb-3"></i>
+                    <h3 class="fw-bold theme-text mb-3" data-lang="ab_msg_title">Message from the Founder</h3>
+                    <p class="lead theme-text-muted fst-italic" style="line-height: 1.8;" data-lang="ab_msg_desc">"Our journey started with a simple belief: no one should be left behind. M.R Welfare Foundation is not just an organization; it's a family of compassionate souls working together to bring smiles to the faces of the underprivileged. Together, we can build a society where humanity thrives."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="py-5 bg-light-alt theme-bg-alt">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h5 class="fw-bold text-secondary-custom" data-lang="ab_team_tag">Our People</h5>
+                <h2 class="fw-bold theme-text mb-4" data-lang="ab_team_title">Meet Our Team</h2>
+                
+                <ul class="nav nav-pills justify-content-center gap-3 mb-5" id="team-pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active rounded-pill px-4 py-2 fw-bold custom-tab-btn" id="pills-executive-tab" data-bs-toggle="pill" data-bs-target="#pills-executive" type="button" role="tab" data-lang="team_tab_exec">Executive Board</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-pill px-4 py-2 fw-bold custom-tab-btn" id="pills-operational-tab" data-bs-toggle="pill" data-bs-target="#pills-operational" type="button" role="tab" data-lang="team_tab_oper">Operational Team</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="team-pills-tabContent">
+                
+                <div class="tab-pane fade show active" id="pills-executive" role="tabpanel">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card theme-card border-0 shadow-sm text-center h-100 rounded-4 overflow-hidden team-card">
+                                <img src="asstes/image/oner.jpeg" alt="Founder" class="img-fluid" style="height: 280px; object-fit: cover;">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bold theme-text mb-1" data-lang="team_exec_1_name">Abdul Motaleb Moien</h5>
+                                    <p class="text-secondary-custom fw-bold mb-3" data-lang="team_exec_1_role">Founder & Chairman</p>
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card theme-card border-0 shadow-sm text-center h-100 rounded-4 overflow-hidden team-card">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="img-fluid" style="height: 280px; object-fit: cover;">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bold theme-text mb-1" data-lang="team_exec_2_name">Jane Doe</h5>
+                                    <p class="text-secondary-custom fw-bold mb-3" data-lang="team_exec_2_role">General Secretary</p>
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card theme-card border-0 shadow-sm text-center h-100 rounded-4 overflow-hidden team-card">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="img-fluid" style="height: 280px; object-fit: cover;">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bold theme-text mb-1" data-lang="team_exec_3_name">John Smith</h5>
+                                    <p class="text-secondary-custom fw-bold mb-3" data-lang="team_exec_3_role">Treasurer</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <h2 class="fw-bold text-white mb-1">50K+</h2>
-                        <p class="stats-label mb-0" data-lang="stat_4">TARGET ACHIEVED</p>
+                </div>
+
+                <div class="tab-pane fade" id="pills-operational" role="tabpanel">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card theme-card border-0 shadow-sm text-center h-100 rounded-4 overflow-hidden team-card">
+                                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="img-fluid" style="height: 280px; object-fit: cover;">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bold theme-text mb-1" data-lang="team_oper_1_name">Robert Fox</h5>
+                                    <p class="text-secondary-custom fw-bold mb-3" data-lang="team_oper_1_role">Project Director</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card theme-card border-0 shadow-sm text-center h-100 rounded-4 overflow-hidden team-card">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="img-fluid" style="height: 280px; object-fit: cover;">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bold theme-text mb-1" data-lang="team_oper_2_name">Sarah Connor</h5>
+                                    <p class="text-secondary-custom fw-bold mb-3" data-lang="team_oper_2_role">Volunteer Coordinator</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-md-6 col-lg-3">
+                            <div class="card theme-card border-0 shadow-sm text-center h-100 rounded-4 overflow-hidden team-card">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="img-fluid" style="height: 280px; object-fit: cover;">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bold theme-text mb-1" data-lang="team_oper_3_name">Michael Bruce</h5>
+                                    <p class="text-secondary-custom fw-bold mb-3" data-lang="team_oper_3_role">PR & Media Head</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-light-alt theme-bg-alt">
+        <div class="container text-center">
+            <div class="d-inline-flex flex-column flex-md-row align-items-center theme-card px-5 py-4 rounded-pill shadow-sm border" style="border-color: rgba(0,0,0,0.05) !important;">
+                <i class="fa-solid fa-certificate text-warning fa-2x me-md-3 mb-2 mb-md-0"></i>
+                <div class="text-md-start text-center">
+                    <h5 class="fw-bold mb-1 theme-text" data-lang="ab_legal_title">Registered under Govt. of Bangladesh</h5>
+                    <span class="text-secondary-custom fw-bold fs-6" data-lang="ab_legal_reg">Registration No: NGO-XXXX/2026</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-5 my-4 theme-bg-alt">
-        <div class="container py-4 text-center">
-            <h2 class="fw-bold mb-5 theme-text">
-                <span class="highlight-underline" data-lang="helped_title">Helped till now</span>
-            </h2>
-            
-            <div class="row g-4 text-start">
-                <div class="col-md-4">
-                    <div class="feature-box theme-card">
-                        <div class="icon-wrapper"><i class="fa-solid fa-handshake-angle"></i></div>
-                        <h5 class="fw-bold mb-3 theme-text" data-lang="feat_1_title">Helping humanity</h5>
-                        <p class="theme-text-muted" data-lang="feat_1_desc">Through education, healthcare, sustainable development, and emergency relief, we make a positive impact. Join us now</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box active theme-card-active">
-                        <div class="icon-wrapper"><i class="fa-solid fa-seedling"></i></div>
-                        <h5 class="fw-bold mb-3 theme-text" data-lang="feat_2_title">Love your ecosystem</h5>
-                        <p class="theme-text-muted" data-lang="feat_2_desc">Through awaking people we're on a mission to inspire love and care for our environment to keep balance nature.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box theme-card">
-                        <div class="icon-wrapper"><i class="fa-solid fa-users"></i></div>
-                        <h5 class="fw-bold mb-3 theme-text" data-lang="feat_3_title">Empowering Communities</h5>
-                        <p class="theme-text-muted" data-lang="feat_3_desc">Through strategic partnerships and dedicated volunteers, we've been able to swiftly respond to emergencies, offering shelter, food.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div style="height: 10px; background-color: #F5A623; width: 100%;"></div>
 
-    <div style="height: 15px; background-color: #F5A623; width: 100%;"></div>
-
-    <footer class="footer py-5 text-white">
+   <footer class="footer py-5 text-white">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h4 class="fw-bold mb-3" data-lang="footer_title">M.R Welfare Foundation</h4>
-                    <p class="text-light" data-lang="footer_desc">Committed to creating sustainable social impact...</p>
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none mb-4">
+                        <img src="asstes/image/logo.png" alt="Logo" style="height: 55px; width: auto; object-fit: contain; margin-right: 12px;">
+                        <div class="d-flex flex-column justify-content-center">
+                            <span class="text-white fw-bold" style="font-size: 1.3rem; letter-spacing: 1px; font-family: var(--font-heading); line-height: 1;">M.R WELFARE</span>
+                            <span style="color: var(--accent-red); font-size: 0.8rem; font-weight: 700; letter-spacing: 3.5px; font-family: var(--font-heading); line-height: 1; margin-top: 4px;">FOUNDATION</span>
+                        </div>
+                    </a>
+                   
+                    <p class="text-light" data-lang="footer_desc">Committed to creating sustainable social impact and
+                        spreading kindness, humanity, and support to make a better future for everyone.</p>
+                    <h5 class="fw-bold theme-text mt-5 mb-3" data-lang="contact_social">Follow Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-4">
                     <h5 class="fw-bold mb-3" data-lang="footer_quick_links">Quick Links</h5>
@@ -149,14 +291,23 @@
                 </div>
                 <div class="col-lg-4">
                     <h5 class="fw-bold mb-3" data-lang="footer_contact_info">Contact Info</h5>
-                    <p><i class="fa-solid fa-location-dot me-2"></i> <span data-lang="footer_address">Dhaka, Bangladesh</span></p>
-                    <p><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880 1XXXXXXXXX</span></p>
-                    <p><i class="fa-solid fa-envelope me-2"></i> <span data-lang="footer_email">info@mrwelfare.org</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-location-dot me-2"></i> <span
+                            data-lang="footer_address"> kha-12/2,(3rd Floor), progoti Soroni, Shajadpur,
+                            Gulshan,Dhaka-1212, Bangladesh</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880
+                            1818861685</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880
+                            1714962854</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880
+                            1813205962</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-envelope me-2"></i> <span
+                            data-lang="footer_email">info@mrwelfare.org</span></p>
                 </div>
             </div>
             <hr class="mt-4 mb-3 border-secondary">
             <div class="text-center">
-                <p class="mb-0" data-lang="footer_copyright">&copy; 2026 M.R Welfare Foundation. All Rights Reserved.</p>
+                <p class="mb-0" data-lang="footer_copyright">&copy; 2026 M.R Welfare Foundation. All Rights Reserved.
+                </p>
             </div>
         </div>
     </footer>
