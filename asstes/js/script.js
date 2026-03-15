@@ -506,3 +506,31 @@ window.addEventListener('load', function() {
         }, 500);
     }
 });
+
+/* =========================================
+   PAGE TRANSITION (Smooth Preloader on Link Click)
+========================================= */
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        let targetUrl = this.getAttribute('href');
+        
+        // চেক করা হচ্ছে এটি সাধারণ লিংক কি না (ড্রপডাউন বা # লিংক বাদ দিয়ে)
+        if (targetUrl && targetUrl !== '#' && !targetUrl.startsWith('#') && !this.hasAttribute('data-bs-toggle') && this.getAttribute('target') !== '_blank') {
+            e.preventDefault(); // সাথে সাথে অন্য পেজে যাওয়া বন্ধ করা হলো
+            
+            const preloader = document.getElementById('preloader');
+            if(preloader) {
+                // প্রিলোডারটি আবার স্ক্রিনে দেখানো হলো
+                preloader.classList.remove('preloader-hidden');
+                preloader.style.visibility = 'visible';
+                preloader.style.opacity = '1';
+                preloader.style.display = 'flex';
+            }
+            
+            // 500 মিলিসেকেন্ড (অর্ধেক সেকেন্ড) অ্যানিমেশন দেখিয়ে তারপর নতুন পেজে নিয়ে যাওয়া হবে
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 500); 
+        }
+    });
+});
