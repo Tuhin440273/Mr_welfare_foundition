@@ -70,9 +70,9 @@ const translations = {
         footer_quick_links: "Quick Links",
         footer_contact_info: "Contact Info",
         footer_address: "kha-12/2,(3rd Floor), progoti Soroni, Shajadpur, Gulshan,Dhaka-1212, Bangladesh",
-        footer_phone: "+880 1818861685",
-        footer_phone: "+880 1714962854",
-        footer_phone: "+880 1813205962",
+        footer_phone_1: "+880 1818861685",
+        footer_phone_2: "+880 1714962854",
+        footer_phone_3: "+880 1813205962",
         footer_email: "info@mrwelfare.org",
         footer_copyright: "© 2026 M.R Welfare Foundation. All Rights Reserved.",
         ab_header_title: "About Us",
@@ -220,6 +220,8 @@ const translations = {
         ab_vision_short: "To envision a poverty-free, educated, and compassionate society where every individual has access to...",
         ab_mission_long: "Our ultimate mission is to empower underprivileged and marginalized communities through comprehensive education, accessible healthcare, and sustainable livelihood programs. We firmly believe that every individual deserves a life of dignity, respect, and equal opportunities. By creating supportive environments and providing necessary resources, we aim to break the cycle of poverty and build a foundation where future generations can thrive and lead independent, successful lives.",
         ab_vision_long: "We envision a world that is poverty-free, highly educated, and deeply compassionate. A society where no one goes to bed hungry, where every child has access to quality education regardless of their background, and where basic human rights are guaranteed for all. We strive to create a global community driven by empathy and mutual support, ensuring that every human being has a fair chance to reach their highest potential and contribute positively to the world.",
+        preloader_text: "M.R WELFARE FOUNDATION • M.R WELFARE FOUNDATION • ",
+
     },
     bn: {
         nav_home: "হোম", nav_about: "আমাদের সম্পর্কে", nav_projects: "প্রজেক্টসমূহ", 
@@ -247,8 +249,10 @@ const translations = {
         footer_desc: "টেকসই সামাজিক প্রভাব তৈরি করতে এবং সবার জন্য একটি সুন্দর ভবিষ্যৎ গড়তে দয়া, মানবতা এবং সহায়তা ছড়িয়ে দিতে প্রতিশ্রুতিবদ্ধ।",
         footer_quick_links: "গুরুত্বপূর্ণ লিংক",
         footer_contact_info: "যোগাযোগের তথ্য",
-        footer_address: "ঢাকা, বাংলাদেশ",
-        footer_phone: "+৮৮০ ১৮১৮৮৬১৬৮৫",
+        footer_address: "খ-১২/২ (৩য় তলা), প্রগতি সরণি, শাহজাদপুর, গুলশান, ঢাকা-১২১২, বাংলাদেশ",
+        footer_phone_1: "+৮৮০ ১৮১৮৮৬১৬৮৫",
+        footer_phone_2: "+৮৮০ ১৭১৮৮৬২৮৫৪",
+        footer_phone_3: "+৮৮০ ১৮১৩২০৫৯৬২",
         footer_email: "info@mrwelfare.org",
         footer_copyright: "© ২০২৬ এম.আর ওয়েলফেয়ার ফাউন্ডেশন। সর্বস্বত্ব সংরক্ষিত।",
         ab_header_title: "আমাদের সম্পর্কে",
@@ -396,7 +400,7 @@ const translations = {
         ab_vision_short: "এমন একটি দারিদ্র্যমুক্ত, শিক্ষিত এবং সহানুভূতিশীল সমাজের স্বপ্ন দেখা যেখানে প্রতিটি মানুষের...",
         ab_mission_long: "আমাদের চূড়ান্ত লক্ষ্য হলো ব্যাপক শিক্ষা, সহজলভ্য স্বাস্থ্যসেবা এবং টেকসই জীবনযাত্রার কর্মসূচির মাধ্যমে সুবিধাবঞ্চিত ও প্রান্তিক জনগোষ্ঠীকে ক্ষমতায়ন করা। আমরা দৃঢ়ভাবে বিশ্বাস করি যে প্রতিটি মানুষেরই মর্যাদা, সম্মান এবং সমান সুযোগ নিয়ে বাঁচার অধিকার রয়েছে। একটি সহায়ক পরিবেশ তৈরি করে এবং প্রয়োজনীয় সংস্থান প্রদানের মাধ্যমে, আমরা দারিদ্র্যের চক্র ভাঙতে এবং এমন একটি ভিত্তি তৈরি করতে চাই যেখানে ভবিষ্যৎ প্রজন্ম উন্নতি করতে পারে এবং স্বাধীন, সফল জীবনযাপন করতে পারে।",
         ab_vision_long: "আমরা এমন একটি বিশ্বের স্বপ্ন দেখি যা দারিদ্র্যমুক্ত, উচ্চশিক্ষিত এবং গভীরভাবে সহানুভূতিশীল। এমন একটি সমাজ যেখানে কেউ ক্ষুধার্ত অবস্থায় ঘুমাতে যাবে না, যেখানে প্রতিটি শিশুর তাদের পটভূমি নির্বিশেষে মানসম্মত শিক্ষার অধিকার রয়েছে এবং যেখানে সবার জন্য মৌলিক মানবাধিকার নিশ্চিত করা হয়। আমরা সহানুভূতি এবং পারস্পরিক সমর্থনের দ্বারা পরিচালিত একটি বিশ্ব সম্প্রদায় তৈরি করার চেষ্টা করি, যা নিশ্চিত করে যে প্রতিটি মানুষের তার সর্বোচ্চ সম্ভাবনায় পৌঁছানোর এবং বিশ্বে ইতিবাচক অবদান রাখার একটি ন্যায্য সুযোগ রয়েছে।",
-        
+        preloader_text: "এম.আর ওয়েলফেয়ার ফাউন্ডেশন • এম.আর ওয়েলফেয়ার ফাউন্ডেশন • ",
         
     }
 };
@@ -485,3 +489,20 @@ if (themeToggleBtn) { // Safety check
         applyTheme(isDarkMode);
     });
 }
+/* =========================================
+   PRELOADER LOGIC
+========================================= */
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // পেজ লোড হওয়ার পর অন্তত 0.5 সেকেন্ড লোগোটা দেখাবে, তারপর হাইড হবে
+        setTimeout(function() {
+            preloader.classList.add('preloader-hidden');
+            
+            // অ্যানিমেশন শেষ হওয়ার পর HTML থেকে সরিয়ে দেওয়া হবে
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 600); 
+        }, 500);
+    }
+});

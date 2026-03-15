@@ -1,60 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Become a Volunteer | M.R Welfare Foundation</title>
     <link rel="icon" type="image/png" href="asstes/image/logo.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="asstes/css/style.css">
 </head>
-<body>
 
-<nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+<body>
+    <div id="preloader" class="preloader-container d-flex justify-content-center align-items-center">
+        <div class="preloader-content position-relative">
+            <img src="asstes/image/logom.png" alt="Logo"
+                class="preloader-logo position-absolute top-50 start-50 translate-middle">
+
+            <svg class="circular-text" viewBox="0 0 100 100">
+                <defs>
+                    <path id="circlePath" d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
+                </defs>
+                <text class="loading-text" fill="var(--primary-green)">
+                    <textPath xlink:href="#circlePath" data-lang="preloader_text">
+                        M.R WELFARE FOUNDATION • M.R WELFARE FOUNDATION •
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
         <div class="container">
             <a class="navbar-brand custom-brand align-items-center" href="index.html">
-                <img class="nav-logo" src="asstes/image/logo.png" alt="Logo" title="M.R Welfare Foundation">
+                <img class="nav-logo" src="asstes/image/logom.png" alt="Logo" title="M.R Welfare Foundation">
                 <div class="brand-text-container d-flex flex-column justify-content-center">
                     <span class="brand-title text-white">M.R WELFARE</span>
                     <span class="brand-subtitle">FOUNDATION</span>
                 </div>
             </a>
 
-            <button class="navbar-toggler text-white border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler text-white border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <i class="fa-solid fa-bars fa-lg text-white"></i>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link " href="index.html" data-lang="nav_home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html" data-lang="nav_about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html" data-lang="nav_projects">Projects</a></li>
-                    
+                    <li class="nav-item"><a class="nav-link" href="projects.html" data-lang="nav_projects">Projects</a>
+                    </li>
+
                     <li class="nav-item dropdown custom-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-lang="nav_media">Media</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-lang="nav_media">Media</a>
                         <ul class="dropdown-menu border-0 shadow-lg rounded-3">
-                            <li><a class="dropdown-item py-2" href="gallery.html" data-lang="nav_gallery"><i class="fa-regular fa-image me-2 text-secondary-custom"></i> Gallery</a></li>
-                            <li><a class="dropdown-item py-2" href="blog.html" data-lang=""><i class="fa-regular  text-secondary-custom"></i> News & Blog</a></li>
+                            <li><a class="dropdown-item py-2" href="gallery.html" data-lang="nav_gallery"><i
+                                        class="fa-regular fa-image me-2 text-secondary-custom"></i> Gallery</a></li>
+                            <li><a class="dropdown-item py-2" href="blog.html" data-lang=""><i
+                                        class="fa-regular  text-secondary-custom"></i> News & Blog</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown custom-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="involvedDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-lang="nav_get_involved">Get Involved</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="involvedDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-lang="nav_get_involved">Get Involved</a>
                         <ul class="dropdown-menu border-0 shadow-lg rounded-3">
-                            <li><a class="dropdown-item py-2" href="volunteer.html" data-lang="nav_volunteer"><i class="fa-solid fa-hand-holding-heart me-2 text-secondary-custom"></i> Volunteer</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item py-2 fw-bold text-primary-custom" href="donation.html" data-lang="nav_donate"><i class="fa-solid fa-circle-dollar-to-slot me-2"></i> Donate Now</a></li>
+                            <li><a class="dropdown-item py-2" href="volunteer.html" data-lang="nav_volunteer"><i
+                                        class="fa-solid fa-hand-holding-heart me-2 text-secondary-custom"></i>
+                                    Volunteer</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item py-2 fw-bold text-primary-custom" href="donation.html"
+                                    data-lang="nav_donate"><i class="fa-solid fa-circle-dollar-to-slot me-2"></i> Donate
+                                    Now</a></li>
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="nav_contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="nav_contact">Contact</a>
+                    </li>
                 </ul>
 
                 <div class="d-flex align-items-center ms-lg-3 gap-2 mt-3 mt-lg-0 pb-3 pb-lg-0">
-                    <button id="theme-toggle" class="btn btn-outline-light rounded-circle" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+                    <button id="theme-toggle" class="btn btn-outline-light rounded-circle"
+                        title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
                     <button id="lang-toggle" class="btn btn-outline-light fw-bold">বাংলা</button>
                     <a class="btn btn-donate" href="donation.html" data-lang="nav_donate">Donate Now</a>
                 </div>
@@ -62,41 +96,48 @@
         </div>
     </nav>
 
-    <header class="page-header d-flex align-items-center" style="background: linear-gradient(rgba(0, 106, 78, 0.85), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; height: 300px;">
+    <header class="page-header d-flex align-items-center"
+        style="background: linear-gradient(rgba(0, 106, 78, 0.85), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; height: 300px;">
         <div class="container text-center text-white">
             <h1 class="display-4 fw-bold" data-lang="vol_header_title">Become a Volunteer</h1>
-            <p class="lead mx-auto" style="max-width: 600px;" data-lang="vol_header_sub">Join our dedicated team and make a real difference in the lives of the underprivileged.</p>
+            <p class="lead mx-auto" style="max-width: 600px;" data-lang="vol_header_sub">Join our dedicated team and
+                make a real difference in the lives of the underprivileged.</p>
         </div>
     </header>
 
     <section class="py-5 bg-light-alt theme-bg-alt">
         <div class="container py-4">
             <div class="row g-5 align-items-center">
-                
+
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <h2 class="fw-bold theme-text mb-4" data-lang="vol_info_title">Why Volunteer With Us?</h2>
-                    <p class="theme-text-muted mb-4" data-lang="vol_info_desc1">Volunteering is not just about giving your time; it's about giving your heart. When you join M.R Welfare Foundation, you become part of a family that works tirelessly to bring smiles to those who have forgotten how to smile.</p>
-                    
+                    <p class="theme-text-muted mb-4" data-lang="vol_info_desc1">Volunteering is not just about giving
+                        your time; it's about giving your heart. When you join M.R Welfare Foundation, you become part
+                        of a family that works tirelessly to bring smiles to those who have forgotten how to smile.</p>
+
                     <ul class="list-unstyled volunteer-benefits theme-text mt-4">
                         <li class="mb-3 d-flex align-items-start">
                             <i class="fa-solid fa-circle-check text-primary-custom fs-4 me-3 mt-1"></i>
                             <div>
                                 <h5 class="fw-bold mb-1" data-lang="vol_benefit_1_title">Impact Lives</h5>
-                                <p class="text-muted theme-text-muted mb-0" data-lang="vol_benefit_1_desc">Directly contribute to projects that provide education, food, and medical help.</p>
+                                <p class="text-muted theme-text-muted mb-0" data-lang="vol_benefit_1_desc">Directly
+                                    contribute to projects that provide education, food, and medical help.</p>
                             </div>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
                             <i class="fa-solid fa-circle-check text-primary-custom fs-4 me-3 mt-1"></i>
                             <div>
                                 <h5 class="fw-bold mb-1" data-lang="vol_benefit_2_title">Learn & Grow</h5>
-                                <p class="text-muted theme-text-muted mb-0" data-lang="vol_benefit_2_desc">Develop leadership skills, teamwork, and gain valuable experience.</p>
+                                <p class="text-muted theme-text-muted mb-0" data-lang="vol_benefit_2_desc">Develop
+                                    leadership skills, teamwork, and gain valuable experience.</p>
                             </div>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
                             <i class="fa-solid fa-circle-check text-primary-custom fs-4 me-3 mt-1"></i>
                             <div>
                                 <h5 class="fw-bold mb-1" data-lang="vol_benefit_3_title">Build a Network</h5>
-                                <p class="text-muted theme-text-muted mb-0" data-lang="vol_benefit_3_desc">Meet like-minded people who share your passion for social work.</p>
+                                <p class="text-muted theme-text-muted mb-0" data-lang="vol_benefit_3_desc">Meet
+                                    like-minded people who share your passion for social work.</p>
                             </div>
                         </li>
                     </ul>
@@ -109,26 +150,34 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label theme-text fw-semibold">Full Name *</label>
-                                    <input type="text" class="form-control theme-input py-2" required placeholder="John Doe" data-lang-placeholder="vol_name">
+                                    <input type="text" class="form-control theme-input py-2" required
+                                        placeholder="John Doe" data-lang-placeholder="vol_name">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label theme-text fw-semibold">Phone Number *</label>
-                                    <input type="text" class="form-control theme-input py-2" required placeholder="01XXXXXXXXX" data-lang-placeholder="vol_phone">
+                                    <input type="text" class="form-control theme-input py-2" required
+                                        placeholder="01XXXXXXXXX" data-lang-placeholder="vol_phone">
                                 </div>
                                 <div class="col-md-12">
                                     <label class="form-label theme-text fw-semibold">Email Address</label>
-                                    <input type="email" class="form-control theme-input py-2" placeholder="example@mail.com" data-lang-placeholder="vol_email">
+                                    <input type="email" class="form-control theme-input py-2"
+                                        placeholder="example@mail.com" data-lang-placeholder="vol_email">
                                 </div>
                                 <div class="col-md-12">
                                     <label class="form-label theme-text fw-semibold">Current Address *</label>
-                                    <input type="text" class="form-control theme-input py-2" required placeholder="Dhaka, Bangladesh" data-lang-placeholder="vol_address">
+                                    <input type="text" class="form-control theme-input py-2" required
+                                        placeholder="Dhaka, Bangladesh" data-lang-placeholder="vol_address">
                                 </div>
                                 <div class="col-md-12">
-                                    <label class="form-label theme-text fw-semibold">Why do you want to join us? *</label>
-                                    <textarea class="form-control theme-input py-2" rows="4" required placeholder="Tell us a little bit about yourself and why you want to volunteer..." data-lang-placeholder="vol_reason"></textarea>
+                                    <label class="form-label theme-text fw-semibold">Why do you want to join us?
+                                        *</label>
+                                    <textarea class="form-control theme-input py-2" rows="4" required
+                                        placeholder="Tell us a little bit about yourself and why you want to volunteer..."
+                                        data-lang-placeholder="vol_reason"></textarea>
                                 </div>
                                 <div class="col-12 mt-4">
-                                    <button type="submit" class="btn btn-primary-custom w-100 py-3 fs-5" data-lang="vol_btn_submit">Submit Application</button>
+                                    <button type="submit" class="btn btn-primary-custom w-100 py-3 fs-5"
+                                        data-lang="vol_btn_submit">Submit Application</button>
                                 </div>
                             </div>
                         </form>
@@ -138,19 +187,23 @@
             </div>
         </div>
     </section>
- <div style="height: 15px; background-color: #F5A623; width: 100%;"></div>
+    <div style="height: 15px; background-color: #F5A623; width: 100%;"></div>
     <footer class="footer py-5 text-white">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
                     <a href="index.html" class="d-flex align-items-center text-decoration-none mb-4">
-                        <img src="asstes/image/logo.png" alt="Logo" style="height: 55px; width: auto; object-fit: contain; margin-right: 12px;">
+                        <img src="asstes/image/logom.png" alt="Logo"
+                            style="height: 55px; width: auto; object-fit: contain; margin-right: 12px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <span class="text-white fw-bold" style="font-size: 1.3rem; letter-spacing: 1px; font-family: var(--font-heading); line-height: 1;">M.R WELFARE</span>
-                            <span style="color: var(--accent-red); font-size: 0.8rem; font-weight: 700; letter-spacing: 3.5px; font-family: var(--font-heading); line-height: 1; margin-top: 4px;">FOUNDATION</span>
+                            <span class="text-white fw-bold"
+                                style="font-size: 1.3rem; letter-spacing: 1px; font-family: var(--font-heading); line-height: 1;">M.R
+                                WELFARE</span>
+                            <span
+                                style="color: var(--accent-red); font-size: 0.8rem; font-weight: 700; letter-spacing: 3.5px; font-family: var(--font-heading); line-height: 1; margin-top: 4px;">FOUNDATION</span>
                         </div>
                     </a>
-                   
+
                     <p class="text-light" data-lang="footer_desc">Committed to creating sustainable social impact and
                         spreading kindness, humanity, and support to make a better future for everyone.</p>
                     <h5 class="fw-bold theme-text mt-5 mb-3" data-lang="contact_social">Follow Us</h5>
@@ -175,12 +228,17 @@
                     <p style="opacity: 0.8;"><i class="fa-solid fa-location-dot me-2"></i> <span
                             data-lang="footer_address"> kha-12/2,(3rd Floor), progoti Soroni, Shajadpur,
                             Gulshan,Dhaka-1212, Bangladesh</span></p>
-                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880
+
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span
+                            data-lang="footer_phone_1">+880
                             1818861685</span></p>
-                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span
+                            data-lang="footer_phone_2">+880
                             1714962854</span></p>
-                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone">+880
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span
+                            data-lang="footer_phone_3">+880
                             1813205962</span></p>
+
                     <p style="opacity: 0.8;"><i class="fa-solid fa-envelope me-2"></i> <span
                             data-lang="footer_email">info@mrwelfare.org</span></p>
                 </div>
@@ -196,4 +254,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="asstes/js/script.js"></script>
 </body>
+
 </html>

@@ -23,6 +23,115 @@
     --font-body: 'Open Sans', sans-serif;
     --font-bangla: 'Noto Sans Bengali', sans-serif;
 }
+/* =========================================
+   CIRCULAR TEXT PRELOADER STYLES
+========================================= */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-bg); /* থিমের ব্যাকগ্রাউন্ড কালার */
+    z-index: 99999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* ডার্ক মোডের জন্য প্রিলোডার ব্যাকগ্রাউন্ড কালো হবে */
+body.dark-mode #preloader {
+    background-color: #121212;
+}
+
+/* প্রিলোডার কন্টেইনারের সাইজ */
+/* প্রিলোডারের মূল বক্স (বর্ডারটি স্থির থাকবে) */
+/* প্রিলোডারের মূল বক্স (৬ ভাগের লাল-সবুজ বর্ডার) */
+.preloader-content {
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+    padding: 10px; 
+    /* বর্ডার মুছে ফেলে conic-gradient দেওয়া হলো (৬০ ডিগ্রি করে ৬ ভাগ) */
+    background: conic-gradient(
+        var(--accent-red) 0deg 60deg, 
+        var(--primary-green) 60deg 120deg, 
+        var(--accent-red) 120deg 180deg, 
+        var(--primary-green) 180deg 240deg, 
+        var(--accent-red) 240deg 300deg, 
+        var(--primary-green) 300deg 360deg
+    );
+}
+
+/* মাঝখানের অংশটুকু ঢেকে দিয়ে বর্ডারের মতো লুক তৈরি করা */
+.preloader-content::before {
+    content: '';
+    position: absolute;
+    top: 6px; /* এই 6px হলো বর্ডারের পুরুত্ব (মোটা)। চাইলে বাড়াতে/কমাতে পারেন */
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background-color: var(--main-bg); /* ভেতরের অংশ সাদা/থিমের কালার করে দেওয়া হলো */
+    border-radius: 50%;
+    z-index: 1; /* এটি লেখার নিচে থাকবে */
+}
+
+/* ডার্ক মোডের জন্য ভেতরের অংশ কালো হবে */
+body.dark-mode .preloader-content::before {
+    background-color: #121212;
+}
+
+/* গোলবৃত্তাকার লেখা (যাতে এটি বর্ডারের ওপরে দেখা যায়) */
+.circular-text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; /* লেখাটি যেন ঢেকে না যায় তাই z-index বাড়ানো হলো */
+    animation: spinText 10s linear infinite; 
+}
+
+/* লোগোর সাইজ ও পজিশন */
+.preloader-logo {
+    width: 150px; /* লোগোর সাইজ */
+    height: auto;
+    z-index: 10;
+}
+
+/* গোলবৃত্তাকার লেখা (Circular Text) SVG */
+/* =========================================
+   CIRCULAR TEXT BORDER STYLES
+========================================= */
+/* গোলবৃত্তাকার লেখা (শুধু এই লেখাটি ঘুরবে) */
+.circular-text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spinText 10s linear infinite; /* শুধু লেখাটি ঘুরবে */
+}
+
+/* গোলবৃত্তাকার লেখার স্টাইল */
+.loading-text {
+    font-size: 8px; /* লেখার সাইজ */
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+/* লেখা ঘোরার অ্যানিমেশন (Spin Animation) */
+@keyframes spinText {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* পেজ লোড হয়ে গেলে প্রিলোডার লুকানোর ক্লাস */
+.preloader-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
 
 /* --- Dark Mode Variables --- */
 body.dark-mode {
@@ -129,24 +238,9 @@ body.dark-mode .theme-card { background-color: #242424 !important; }
     transition: 0.3s ease;
 }
 
-.brand-title {
-    font-size: 1.35rem; 
-    font-weight: 800;
-    letter-spacing: 1px;
-    font-family: var(--font-heading);
-    line-height: 1;
-    color: #ffffff;
-}
 
-.brand-subtitle {
-    color: var(--accent-red);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 3.5px; 
-    font-family: var(--font-heading);
-    line-height: 1;
-    margin-top: 3px;
-}
+
+
 
 /* Nav Links & Toggles */
 .custom-navbar .nav-link {
