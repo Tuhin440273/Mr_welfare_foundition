@@ -33,13 +33,12 @@
             </svg>
         </div>
     </div>
+
     <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
         <div class="container">
             <a class="navbar-brand custom-brand align-items-center" href="index.html">
                 <img class="nav-logo" src="asstes/image/logom.png" alt="Logo" title="M.R Welfare Foundation">
                 <div class="brand-text-container d-flex flex-column justify-content-center">
-                    <span class="brand-title text-white">M.R WELFARE</span>
-                    <span class="brand-subtitle">FOUNDATION</span>
                 </div>
             </a>
 
@@ -52,8 +51,7 @@
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link " href="index.html" data-lang="nav_home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html" data-lang="nav_about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html" data-lang="nav_projects">Projects</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html" data-lang="nav_projects">Projects</a></li>
 
                     <li class="nav-item dropdown custom-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" data-bs-toggle="dropdown"
@@ -61,8 +59,8 @@
                         <ul class="dropdown-menu border-0 shadow-lg rounded-3">
                             <li><a class="dropdown-item py-2" href="gallery.html" data-lang="nav_gallery"><i
                                         class="fa-regular fa-image me-2 text-secondary-custom"></i> Gallery</a></li>
-                            <li><a class="dropdown-item py-2" href="blog.html" data-lang=""><i
-                                        class="fa-regular  text-secondary-custom"></i> News & Blog</a></li>
+                            <li><a class="dropdown-item py-2" href="blog.html" data-lang="nav_blog"><i
+                                        class="fa-regular fa-newspaper me-2 text-secondary-custom"></i> News & Blog</a></li>
                         </ul>
                     </li>
 
@@ -73,22 +71,17 @@
                             <li><a class="dropdown-item py-2" href="volunteer.html" data-lang="nav_volunteer"><i
                                         class="fa-solid fa-hand-holding-heart me-2 text-secondary-custom"></i>
                                     Volunteer</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item py-2 fw-bold text-primary-custom" href="donation.html"
-                                    data-lang="nav_donate"><i class="fa-solid fa-circle-dollar-to-slot me-2"></i> Donate
-                                    Now</a></li>
+                                    data-lang="nav_donate"><i class="fa-solid fa-circle-dollar-to-slot me-2"></i> Donate Now</a></li>
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="nav_contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="nav_contact">Contact</a></li>
                 </ul>
 
                 <div class="d-flex align-items-center ms-lg-3 gap-2 mt-3 mt-lg-0 pb-3 pb-lg-0">
-                    <button id="theme-toggle" class="btn btn-outline-light rounded-circle"
-                        title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+                    <button id="theme-toggle" class="btn btn-outline-light rounded-circle" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
                     <button id="lang-toggle" class="btn btn-outline-light fw-bold">বাংলা</button>
                     <a class="btn btn-donate" href="donation.html" data-lang="nav_donate">Donate Now</a>
                 </div>
@@ -100,106 +93,237 @@
         style="background: linear-gradient(rgba(0, 106, 78, 0.8), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1593113563332-e147ce367df0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; height: 300px;">
         <div class="container text-center text-white">
             <h1 class="display-4 fw-bold" data-lang="proj_header_title">Our Projects</h1>
-            <p class="lead" data-lang="proj_header_sub">Explore the initiatives we are taking to bring a positive change
-                in the community.</p>
+            <p class="lead" data-lang="proj_header_sub">Explore the initiatives we are taking to bring a positive change in the community.</p>
         </div>
     </header>
 
-    <section class="py-5 bg-light-alt theme-bg-alt">
+    <section class="py-5 theme-bg">
         <div class="container py-4">
-            <div class="row g-5">
-
-                <div class="col-lg-6">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold theme-text border-bottom border-success border-3 pb-2 d-inline-block" data-lang="sec_islamic_title">Islamic Donation Sectors</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
                         <div class="project-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Education Support" class="img-fluid project-img">
-                            <div class="project-badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill"><i
-                                    class="fa-solid fa-book-open me-2"></i>Education</div>
+                            <img src="https://images.unsplash.com/photo-1554127027-6f8e77a83d72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Zakat" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-success text-white fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-hand-holding-dollar me-2"></i>Zakat</div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="fw-bold theme-text mb-3" data-lang="proj_edu_title">Education Support</h3>
-                            <p class="text-muted theme-text-muted mb-4" data-lang="proj_edu_desc">Providing free books,
-                                stationeries, and covering school fees for underprivileged children to ensure they have
-                                a bright future.</p>
-                            <a href="donation.html" class="btn btn-outline-primary-custom fw-bold"
-                                data-lang="nav_donate">Donate Now</a>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_zakat_title">Zakat (যাকাত)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_zakat_desc">Purify your wealth by giving your obligatory Zakat to the most deserving and vulnerable people.</p>
+                            <a href="donation.htmlt" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
                         <div class="project-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Medical Help" class="img-fluid project-img">
-                            <div class="project-badge bg-info text-dark fw-bold px-3 py-1 rounded-pill"><i
-                                    class="fa-solid fa-notes-medical me-2"></i>Medical</div>
+                            <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sadaqah" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-coins me-2"></i>Sadaqah</div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="fw-bold theme-text mb-3" data-lang="proj_med_title">Medical Help</h3>
-                            <p class="text-muted theme-text-muted mb-4" data-lang="proj_med_desc">Organizing free
-                                medical camps, providing essential medicines, and ensuring healthcare access for those
-                                who cannot afford it.</p>
-                            <a href="donation.html" class="btn btn-outline-primary-custom fw-bold"
-                                data-lang="nav_donate">Donate Now</a>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_sadaqah_title">Sadaqah (সদকা)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_sadaqah_desc">Give voluntary charity to bring immediate relief to those suffering from poverty and hunger.</p>
+                            <a href="donation.html?cause=sadaqah" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
                         <div class="project-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Food Distribution" class="img-fluid project-img">
-                            <div class="project-badge bg-success text-white fw-bold px-3 py-1 rounded-pill"><i
-                                    class="fa-solid fa-bowl-rice me-2"></i>Food</div>
+                            <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sadaqah Jariyah" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-info text-dark fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-seedling me-2"></i>Jariyah</div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="fw-bold theme-text mb-3" data-lang="proj_food_title">Food Distribution</h3>
-                            <p class="text-muted theme-text-muted mb-4" data-lang="proj_food_desc">Distributing
-                                nutritious meals to the hungry and organizing special food drives during Ramadan and
-                                crisis periods.</p>
-                            <a href="donation.html" class="btn btn-outline-primary-custom fw-bold"
-                                data-lang="nav_donate">Donate Now</a>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_jariyah_title">Sadaqah Jariyah (সদকায়ে জারিয়া)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_jariyah_desc">Invest in continuous charity like water wells or mosques that benefits people and rewards you endlessly.</p>
+                            <a href="donation.html?cause=jariyah" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
                         <div class="project-img-wrapper">
-                            <img src="https://apadm.org/cms/wp-content/uploads/2024/06/446857739_774542414802369_1521091755315483349_n.jpg"
-                                alt="Disaster Relief" class="img-fluid project-img">
-                            <div class="project-badge bg-danger text-white fw-bold px-3 py-1 rounded-pill"><i
-                                    class="fa-solid fa-house-chimney-crack me-2"></i>Emergency</div>
+                            <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fitrana" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-primary text-white fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-wheat-awn me-2"></i>Fitrana</div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="fw-bold theme-text mb-3" data-lang="proj_disaster_title">Disaster Relief</h3>
-                            <p class="text-muted theme-text-muted mb-4" data-lang="proj_disaster_desc">Swiftly
-                                responding to natural disasters like floods and cyclones with emergency shelter, safe
-                                drinking water, and relief materials.</p>
-                            <a href="donation.html" class="btn btn-outline-primary-custom fw-bold"
-                                data-lang="nav_donate">Donate Now</a>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_fitrana_title">Fitrana (ফিতরা)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_fitrana_desc">Pay your Sadaqatul Fitr before Eid prayers so the poor can also celebrate the joyous day.</p>
+                            <a href="donation.html?cause=fitrana" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
                         </div>
                     </div>
                 </div>
-
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1593113565214-80afcb4a4771?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kaffarah" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-danger text-white fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-scale-balanced me-2"></i>Kaffarah</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_kaffarah_title">Kaffarah (কাফফারা)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_kaffarah_desc">Fulfill your religious compensation for broken oaths or missed fasts by feeding the needy.</p>
+                            <a href="donation.html?cause=kaffarah" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lillah" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-secondary text-white fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-heart me-2"></i>Lillah</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_lillah_title">Lillah Fund (লিল্লাহ ফান্ড)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_lillah_desc">Donate purely for the sake of Allah to support the foundation's operations and various charitable activities.</p>
+                            <a href="donation.html?cause=lillah" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-5" style="background-color: var(--primary-green);">
-        <div class="container text-center text-white py-4">
-            <h2 class="fw-bold mb-3" data-lang="proj_cta_title">Support Our Cause</h2>
-            <p class="lead mb-4" data-lang="proj_cta_desc">Your small contribution can make a huge difference in
-                someone's life.</p>
-            <a href="donation.html" class="btn btn-donate btn-lg mx-2 my-2" data-lang="nav_donate">Donate Now</a>
-            <a href="volunteer.html" class="btn btn-outline-light btn-lg mx-2 my-2" data-lang="btn_join_us">Become a
-                Volunteer</a>
+    <section class="py-5 bg-light-alt theme-bg-alt">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold theme-text border-bottom border-warning border-3 pb-2 d-inline-block" data-lang="sec_general_title">General Humanitarian Aid</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Food Aid" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-success text-white fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-bowl-rice me-2"></i>Food</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_food_title_2">Food Aid (খাদ্য সহায়তা)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_food_desc_2">Provide nutritious meals and grocery packs to families suffering from extreme poverty and hunger.</p>
+                            <a href="donation.html?cause=food" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Education" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-book-open me-2"></i>Education</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_edu_title_2">Education Support (শিক্ষা সহায়তা)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_edu_desc_2">Ensure a bright future for underprivileged children by covering their school fees, books, and supplies.</p>
+                            <a href="donation.html?cause=education" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Medical Help" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-info text-dark fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-notes-medical me-2"></i>Medical</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_med_title_2">Medical Aid (চিকিৎসা সহায়তা)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_med_desc_2">Fund life-saving treatments, medicines, and free medical camps for those who cannot afford healthcare.</p>
+                            <a href="donation.html?cause=medical" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Orphan" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-primary text-white fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-children me-2"></i>Orphan</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_orphan_title">Orphan Support (এতিম সহায়তা)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_orphan_desc">Sponsor an orphan to provide them with food, shelter, education, and the loving care they deserve.</p>
+                            <a href="donation.html?cause=orphan" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Winter Aid" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-secondary text-white fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-mitten me-2"></i>Winter</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_winter_title">Winter Aid (শীতবস্ত্র সহায়তা)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_winter_desc">Distribute warm clothes and blankets to help the destitute survive the harsh, freezing winters.</p>
+                            <a href="donation.html?cause=winter" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://apadm.org/cms/wp-content/uploads/2024/06/446857739_774542414802369_1521091755315483349_n.jpg" alt="Disaster Relief" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-danger text-white fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-house-chimney-crack me-2"></i>Emergency</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_disaster_title_2">Disaster Relief (দুর্যোগ ত্রাণ)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_disaster_desc_2">Provide immediate rescue, emergency shelter, and relief supplies during floods and natural disasters.</p>
+                            <a href="donation.html?cause=disaster" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section class="py-5 theme-bg">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold theme-text border-bottom border-primary border-3 pb-2 d-inline-block" data-lang="sec_special_title">Special Projects</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mosque" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-success text-white fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-mosque me-2"></i>Mosque</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_mosque_title">Mosque Support (মসজিদ নির্মাণ)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_mosque_desc">Help build or renovate mosques in remote areas where Muslims lack a proper place for congregation.</p>
+                            <a href="donation.html?cause=mosque" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1541888035-779d7ce11eeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tube Well" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-info text-dark fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-faucet-drip me-2"></i>Water</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_tubewell_title">Tube Well (নলকূপ স্থাপন)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_tubewell_desc">Install tube wells to provide clean and safe drinking water to communities suffering from water scarcity.</p>
+                            <a href="donation.html?cause=tubewell" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card shadow-sm theme-card h-100 border-0 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Housing" class="img-fluid project-img" style="height: 220px; width: 100%; object-fit: cover;">
+                            <div class="project-badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill"><i class="fa-solid fa-house me-2"></i>Housing</div>
+                        </div>
+                        <div class="p-4 d-flex flex-column h-100">
+                            <h4 class="fw-bold theme-text mb-3" data-lang="proj_housing_title">Housing Support (ঘর নির্মাণ)</h4>
+                            <p class="text-muted theme-text-muted mb-4 flex-grow-1" data-lang="proj_housing_desc">Build safe and secure homes for destitute families and widows who live in broken or temporary shelters.</p>
+                            <a href="donation.html?cause=housing" class="btn btn-outline-primary-custom fw-bold mt-auto" data-lang="nav_donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div style="height: 15px; background-color: #F5A623; width: 100%;"></div>
+    
     <footer class="footer py-5 text-white">
         <div class="container">
             <div class="row g-4">
@@ -208,16 +332,9 @@
                         <img src="asstes/image/logom.png" alt="Logo"
                             style="height: 55px; width: auto; object-fit: contain; margin-right: 12px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <span class="text-white fw-bold"
-                                style="font-size: 1.3rem; letter-spacing: 1px; font-family: var(--font-heading); line-height: 1;">M.R
-                                WELFARE</span>
-                            <span
-                                style="color: var(--accent-red); font-size: 0.8rem; font-weight: 700; letter-spacing: 3.5px; font-family: var(--font-heading); line-height: 1; margin-top: 4px;">FOUNDATION</span>
                         </div>
                     </a>
-
-                    <p class="text-light" data-lang="footer_desc">Committed to creating sustainable social impact and
-                        spreading kindness, humanity, and support to make a better future for everyone.</p>
+                    <p class="text-light" data-lang="footer_desc">Committed to creating sustainable social impact and spreading kindness, humanity, and support to make a better future for everyone.</p>
                     <h5 class="fw-bold theme-text mt-5 mb-3" data-lang="contact_social">Follow Us</h5>
                     <div class="d-flex gap-3">
                         <a href="#" class="social-icon-btn"><i class="fa-brands fa-facebook-f"></i></a>
@@ -238,27 +355,16 @@
                 <div class="col-lg-4">
                     <h5 class="fw-bold mb-3" data-lang="footer_contact_info">Contact Info</h5>
                     <p style="opacity: 0.8;"><i class="fa-solid fa-location-dot me-2"></i> <span
-                            data-lang="footer_address"> kha-12/2,(3rd Floor), progoti Soroni, Shajadpur,
-                            Gulshan,Dhaka-1212, Bangladesh</span></p>
-
-                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span
-                            data-lang="footer_phone_1">+880
-                            1818861685</span></p>
-                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span
-                            data-lang="footer_phone_2">+880
-                            1714962854</span></p>
-                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span
-                            data-lang="footer_phone_3">+880
-                            1813205962</span></p>
-
-                    <p style="opacity: 0.8;"><i class="fa-solid fa-envelope me-2"></i> <span
-                            data-lang="footer_email">info@mrwelfare.org</span></p>
+                            data-lang="footer_address"> kha-12/2,(3rd Floor), progoti Soroni, Shajadpur, Gulshan,Dhaka-1212, Bangladesh</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone_1">+880 1818861685</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone_2">+880 1714962854</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-phone me-2"></i> <span data-lang="footer_phone_3">+880 1813205962</span></p>
+                    <p style="opacity: 0.8;"><i class="fa-solid fa-envelope me-2"></i> <span data-lang="footer_email">info@mrwelfare.org</span></p>
                 </div>
             </div>
             <hr class="mt-4 mb-3 border-secondary">
             <div class="text-center">
-                <p class="mb-0" data-lang="footer_copyright">&copy; 2026 M.R Welfare Foundation. All Rights Reserved.
-                </p>
+                <p class="mb-0" data-lang="footer_copyright">&copy; 2026 M.R Welfare Foundation. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -266,5 +372,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="asstes/js/script.js"></script>
 </body>
-
 </html>

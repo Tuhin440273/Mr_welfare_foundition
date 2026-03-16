@@ -44,7 +44,7 @@ if (counters.length > 0) {
 ==================================== */
 const translations = {
     en: {
-        nav_home: "Home", nav_about: "About", nav_projects: "Projects", 
+        nav_home: "Home", nav_about: "About", nav_projects: "Projects", nav_blog: "News & Blog",nav_media: "Media",nav_get_involved:"Get Involved",
         nav_gallery: "Gallery", nav_volunteer: "Volunteer", nav_contact: "Contact", nav_donate: "Donate Now",
         slide_1_title: "Helping People, Building a Better Future",
         slide_1_desc: "Join hands with us to support underprivileged and vulnerable communities across Bangladesh.",
@@ -221,10 +221,45 @@ const translations = {
         ab_mission_long: "Our ultimate mission is to empower underprivileged and marginalized communities through comprehensive education, accessible healthcare, and sustainable livelihood programs. We firmly believe that every individual deserves a life of dignity, respect, and equal opportunities. By creating supportive environments and providing necessary resources, we aim to break the cycle of poverty and build a foundation where future generations can thrive and lead independent, successful lives.",
         ab_vision_long: "We envision a world that is poverty-free, highly educated, and deeply compassionate. A society where no one goes to bed hungry, where every child has access to quality education regardless of their background, and where basic human rights are guaranteed for all. We strive to create a global community driven by empathy and mutual support, ensuring that every human being has a fair chance to reach their highest potential and contribute positively to the world.",
         preloader_text: "M.R WELFARE FOUNDATION • M.R WELFARE FOUNDATION • ",
+        sec_islamic_title: "Islamic Donation Sectors",
+        proj_zakat_title: "Zakat",
+        proj_zakat_desc: "Purify your wealth by giving your obligatory Zakat to the most deserving and vulnerable people.",
+        proj_sadaqah_title: "Sadaqah",
+        proj_sadaqah_desc: "Give voluntary charity to bring immediate relief to those suffering from poverty and hunger.",
+        proj_jariyah_title: "Sadaqah Jariyah",
+        proj_jariyah_desc: "Invest in continuous charity like water wells or mosques that benefits people and rewards you endlessly.",
+        proj_fitrana_title: "Fitrana",
+        proj_fitrana_desc: "Pay your Sadaqatul Fitr before Eid prayers so the poor can also celebrate the joyous day.",
+        proj_kaffarah_title: "Kaffarah",
+        proj_kaffarah_desc: "Fulfill your religious compensation for broken oaths or missed fasts by feeding the needy.",
+        proj_lillah_title: "Lillah Fund",
+        proj_lillah_desc: "Donate purely for the sake of Allah to support the foundation's operations and various charitable activities.",
+        
+        sec_general_title: "General Humanitarian Aid",
+        proj_food_title_2: "Food Aid",
+        proj_food_desc_2: "Provide nutritious meals and grocery packs to families suffering from extreme poverty and hunger.",
+        proj_edu_title_2: "Education Support",
+        proj_edu_desc_2: "Ensure a bright future for underprivileged children by covering their school fees, books, and supplies.",
+        proj_med_title_2: "Medical Aid",
+        proj_med_desc_2: "Fund life-saving treatments, medicines, and free medical camps for those who cannot afford healthcare.",
+        proj_orphan_title: "Orphan Support",
+        proj_orphan_desc: "Sponsor an orphan to provide them with food, shelter, education, and the loving care they deserve.",
+        proj_winter_title: "Winter Aid",
+        proj_winter_desc: "Distribute warm clothes and blankets to help the destitute survive the harsh, freezing winters.",
+        proj_disaster_title_2: "Disaster Relief",
+        proj_disaster_desc_2: "Provide immediate rescue, emergency shelter, and relief supplies during floods and natural disasters.",
+        
+        sec_special_title: "Special Projects",
+        proj_mosque_title: "Mosque Support",
+        proj_mosque_desc: "Help build or renovate mosques in remote areas where Muslims lack a proper place for congregation.",
+        proj_tubewell_title: "Tube Well Project",
+        proj_tubewell_desc: "Install tube wells to provide clean and safe drinking water to communities suffering from water scarcity.",
+        proj_housing_title: "Housing Support",
+        proj_housing_desc: "Build safe and secure homes for destitute families and widows who live in broken or temporary shelters."
 
     },
     bn: {
-        nav_home: "হোম", nav_about: "আমাদের সম্পর্কে", nav_projects: "প্রজেক্টসমূহ", 
+        nav_home: "হোম", nav_about: "আমাদের সম্পর্কে", nav_projects: "প্রজেক্টসমূহ", nav_blog: "নিউজ ও ব্লগ",nav_media: "মিডিয়া",nav_get_involved: "যুক্ত হোন",
         nav_gallery: "গ্যালারি", nav_volunteer: "স্বেচ্ছাসেবক", nav_contact: "যোগাযোগ", nav_donate: "দান করুন",
         slide_1_title: "মানুষকে সাহায্য করা, একটি সুন্দর ভবিষ্যৎ গড়া",
         slide_1_desc: "বাংলাদেশের সুবিধাবঞ্চিত ও অসহায় মানুষের পাশে দাঁড়াতে আমাদের সাথে হাত মেলান।",
@@ -401,6 +436,41 @@ const translations = {
         ab_mission_long: "আমাদের চূড়ান্ত লক্ষ্য হলো ব্যাপক শিক্ষা, সহজলভ্য স্বাস্থ্যসেবা এবং টেকসই জীবনযাত্রার কর্মসূচির মাধ্যমে সুবিধাবঞ্চিত ও প্রান্তিক জনগোষ্ঠীকে ক্ষমতায়ন করা। আমরা দৃঢ়ভাবে বিশ্বাস করি যে প্রতিটি মানুষেরই মর্যাদা, সম্মান এবং সমান সুযোগ নিয়ে বাঁচার অধিকার রয়েছে। একটি সহায়ক পরিবেশ তৈরি করে এবং প্রয়োজনীয় সংস্থান প্রদানের মাধ্যমে, আমরা দারিদ্র্যের চক্র ভাঙতে এবং এমন একটি ভিত্তি তৈরি করতে চাই যেখানে ভবিষ্যৎ প্রজন্ম উন্নতি করতে পারে এবং স্বাধীন, সফল জীবনযাপন করতে পারে।",
         ab_vision_long: "আমরা এমন একটি বিশ্বের স্বপ্ন দেখি যা দারিদ্র্যমুক্ত, উচ্চশিক্ষিত এবং গভীরভাবে সহানুভূতিশীল। এমন একটি সমাজ যেখানে কেউ ক্ষুধার্ত অবস্থায় ঘুমাতে যাবে না, যেখানে প্রতিটি শিশুর তাদের পটভূমি নির্বিশেষে মানসম্মত শিক্ষার অধিকার রয়েছে এবং যেখানে সবার জন্য মৌলিক মানবাধিকার নিশ্চিত করা হয়। আমরা সহানুভূতি এবং পারস্পরিক সমর্থনের দ্বারা পরিচালিত একটি বিশ্ব সম্প্রদায় তৈরি করার চেষ্টা করি, যা নিশ্চিত করে যে প্রতিটি মানুষের তার সর্বোচ্চ সম্ভাবনায় পৌঁছানোর এবং বিশ্বে ইতিবাচক অবদান রাখার একটি ন্যায্য সুযোগ রয়েছে।",
         preloader_text: "এম.আর ওয়েলফেয়ার ফাউন্ডেশন • এম.আর ওয়েলফেয়ার ফাউন্ডেশন • ",
+        sec_islamic_title: "ইসলামী দানের খাত",
+        proj_zakat_title: "যাকাত (Zakat)",
+        proj_zakat_desc: "আপনার সম্পদের পবিত্রতা রক্ষার্থে সমাজের সবচেয়ে দরিদ্র ও অসহায় মানুষদের যাকাত প্রদান করুন।",
+        proj_sadaqah_title: "সদকা (Sadaqah)",
+        proj_sadaqah_desc: "ক্ষুধা ও দারিদ্র্যপীড়িত মানুষদের তাৎক্ষণিক কষ্ট লাঘবে স্বেচ্ছায় সদকা প্রদান করুন।",
+        proj_jariyah_title: "সদকায়ে জারিয়া (Sadaqah Jariyah)",
+        proj_jariyah_desc: "নলকূপ বা মসজিদ নির্মাণের মতো দীর্ঘস্থায়ী প্রকল্পে দান করুন, যার সওয়াব আপনি অনন্তকাল ধরে পাবেন।",
+        proj_fitrana_title: "ফিতরা / সাদাকাতুল ফিতর",
+        proj_fitrana_desc: "ঈদের নামাজের আগেই আপনার ফিতরা আদায় করুন, যাতে গরিব মানুষরাও ঈদের আনন্দে শরীক হতে পারে।",
+        proj_kaffarah_title: "কাফফারা (Kaffarah)",
+        proj_kaffarah_desc: "শপথ ভঙ্গ বা রোজা ভাঙার ধর্মীয় ক্ষতিপূরণ হিসেবে অভাবীদের খাদ্য প্রদান করে কাফফারা আদায় করুন।",
+        proj_lillah_title: "লিল্লাহ ফান্ড (Lillah Fund)",
+        proj_lillah_desc: "ফাউন্ডেশনের কার্যক্রম পরিচালনা ও বিভিন্ন সেবামূলক কাজের জন্য শুধুমাত্র আল্লাহর সন্তুষ্টির উদ্দেশ্যে লিল্লাহ ফান্ডে দান করুন।",
+        
+        sec_general_title: "সাধারণ মানবিক সাহায্য",
+        proj_food_title_2: "খাদ্য সহায়তা (Food Aid)",
+        proj_food_desc_2: "চরম দারিদ্র্য ও ক্ষুধায় ভোগা পরিবারগুলোর জন্য পুষ্টিকর খাবার এবং মুদি সামগ্রী সরবরাহ করুন।",
+        proj_edu_title_2: "শিক্ষা সহায়তা (Education Support)",
+        proj_edu_desc_2: "সুবিধাবঞ্চিত শিশুদের স্কুলের বেতন, বই ও খাতা প্রদান করে তাদের উজ্জ্বল ভবিষ্যৎ নিশ্চিত করুন।",
+        proj_med_title_2: "চিকিৎসা সহায়তা (Medical Aid)",
+        proj_med_desc_2: "অসচ্ছল রোগীদের জন্য জীবন রক্ষাকারী চিকিৎসা, ওষুধ এবং ফ্রি মেডিকেল ক্যাম্পের ব্যবস্থা করুন।",
+        proj_orphan_title: "এতিম সহায়তা (Orphan Support)",
+        proj_orphan_desc: "একজন এতিম শিশুর দায়িত্ব নিয়ে তাদের খাবার, বাসস্থান, শিক্ষা এবং স্নেহপূর্ণ যত্ন নিশ্চিত করুন।",
+        proj_winter_title: "শীতবস্ত্র সহায়তা (Winter Aid)",
+        proj_winter_desc: "তীব্র শীতের হাত থেকে গরিব ও অসহায় মানুষদের বাঁচাতে তাদের মাঝে শীতের কাপড় এবং কম্বল বিতরণ করুন।",
+        proj_disaster_title_2: "দুর্যোগ ত্রাণ (Disaster Relief)",
+        proj_disaster_desc_2: "বন্যা বা অন্যান্য প্রাকৃতিক দুর্যোগের সময় জরুরি উদ্ধার কাজ, আশ্রয় এবং ত্রাণ সামগ্রী পৌঁছে দিন।",
+        
+        sec_special_title: "বিশেষ প্রকল্প",
+        proj_mosque_title: "মসজিদ নির্মাণ / সংস্কার",
+        proj_mosque_desc: "প্রত্যন্ত অঞ্চলে, যেখানে মুসল্লিদের নামাজ পড়ার মতো ভালো জায়গা নেই, সেখানে মসজিদ নির্মাণে সহায়তা করুন।",
+        proj_tubewell_title: "নলকূপ স্থাপন (Tube Well)",
+        proj_tubewell_desc: "বিশুদ্ধ পানির অভাবে ভোগা এলাকাগুলোতে নলকূপ স্থাপন করে নিরাপদ খাবার পানির ব্যবস্থা করুন।",
+        proj_housing_title: "গরীবদের জন্য ঘর নির্মাণ",
+        proj_housing_desc: "বিধবা বা অসহায় পরিবার, যারা ভাঙাচোরা ঘরে বসবাস করে, তাদের জন্য নিরাপদ ঘরের ব্যবস্থা করুন।"
         
     }
 };
@@ -533,4 +603,17 @@ document.querySelectorAll('a').forEach(link => {
             }, 500); 
         }
     });
+});
+/* =========================================
+   AUTO-SELECT DONATION CAUSE FROM URL
+========================================= */
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const causeParam = urlParams.get('cause');
+    if(causeParam) {
+        const causeSelect = document.getElementById('causeSelect');
+        if(causeSelect) {
+            causeSelect.value = causeParam;
+        }
+    }
 });

@@ -33,14 +33,12 @@
             </svg>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+<nav class="navbar navbar-expand-lg sticky-top custom-navbar">
         <div class="container">
             <a class="navbar-brand custom-brand align-items-center" href="index.html">
                 <img class="nav-logo" src="asstes/image/logom.png" alt="Logo" title="M.R Welfare Foundation">
                 <div class="brand-text-container d-flex flex-column justify-content-center">
-                    <span class="brand-title text-white">M.R WELFARE</span>
-                    <span class="brand-subtitle">FOUNDATION</span>
-                </div>
+                    </div>
             </a>
 
             <button class="navbar-toggler text-white border-0 shadow-none" type="button" data-bs-toggle="collapse"
@@ -52,8 +50,7 @@
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link " href="index.html" data-lang="nav_home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html" data-lang="nav_about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html" data-lang="nav_projects">Projects</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html" data-lang="nav_projects">Projects</a></li>
 
                     <li class="nav-item dropdown custom-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" data-bs-toggle="dropdown"
@@ -61,29 +58,24 @@
                         <ul class="dropdown-menu border-0 shadow-lg rounded-3">
                             <li><a class="dropdown-item py-2" href="gallery.html" data-lang="nav_gallery"><i
                                         class="fa-regular fa-image me-2 text-secondary-custom"></i> Gallery</a></li>
-                            <li><a class="dropdown-item py-2" href="blog.html" data-lang=""><i
-                                        class="fa-regular  text-secondary-custom"></i> News & Blog</a></li>
+                            <li><a class="dropdown-item py-2" href="blog.html" data-lang="nav_blog"><i
+                                        class="fa-regular fa-newspaper me-2 text-secondary-custom"></i> News & Blog</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown custom-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="involvedDropdown" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle active" href="#" id="involvedDropdown" data-bs-toggle="dropdown"
                             aria-expanded="false" data-lang="nav_get_involved">Get Involved</a>
                         <ul class="dropdown-menu border-0 shadow-lg rounded-3">
                             <li><a class="dropdown-item py-2" href="volunteer.html" data-lang="nav_volunteer"><i
-                                        class="fa-solid fa-hand-holding-heart me-2 text-secondary-custom"></i>
-                                    Volunteer</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item py-2 fw-bold text-primary-custom" href="donation.html"
-                                    data-lang="nav_donate"><i class="fa-solid fa-circle-dollar-to-slot me-2"></i> Donate
-                                    Now</a></li>
+                                        class="fa-solid fa-hand-holding-heart me-2 text-secondary-custom"></i> Volunteer</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item py-2 fw-bold text-white active" style="background-color: var(--primary-green);" href="donation.html"
+                                    data-lang="nav_donate"><i class="fa-solid fa-circle-dollar-to-slot me-2 text-white"></i> Donate Now</a></li>
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="nav_contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="nav_contact">Contact</a></li>
                 </ul>
 
                 <div class="d-flex align-items-center ms-lg-3 gap-2 mt-3 mt-lg-0 pb-3 pb-lg-0">
@@ -130,15 +122,25 @@
                             </div>
                         </div>
 
-                        <h5 class="fw-bold theme-text mb-3" data-lang="don_cause">Select a Cause</h5>
-                        <select class="form-select theme-input mb-4 py-2">
-                            <option value="general" data-lang="don_cause_gen">General Fund (Where it's needed most)
-                            </option>
-                            <option value="education" data-lang="don_cause_edu">Education Support</option>
-                            <option value="medical" data-lang="don_cause_med">Medical Help</option>
-                            <option value="food" data-lang="don_cause_food">Food Distribution</option>
-                            <option value="disaster" data-lang="don_cause_disaster">Disaster Relief</option>
-                        </select>
+                       <h5 class="fw-bold theme-text mb-3" data-lang="don_cause">Select a Cause</h5>
+<select id="causeSelect" class="form-select theme-input mb-4 py-2">
+    <option value="general" data-lang="don_cause_gen">General Fund (Where it's needed most)</option>
+    <option value="zakat" data-lang="proj_zakat_title">Zakat</option>
+    <option value="sadaqah" data-lang="proj_sadaqah_title">Sadaqah</option>
+    <option value="jariyah" data-lang="proj_jariyah_title">Sadaqah Jariyah</option>
+    <option value="fitrana" data-lang="proj_fitrana_title">Fitrana</option>
+    <option value="kaffarah" data-lang="proj_kaffarah_title">Kaffarah</option>
+    <option value="lillah" data-lang="proj_lillah_title">Lillah Fund</option>
+    <option value="food" data-lang="proj_food_title_2">Food Aid</option>
+    <option value="education" data-lang="proj_edu_title_2">Education Support</option>
+    <option value="medical" data-lang="proj_med_title_2">Medical Aid</option>
+    <option value="orphan" data-lang="proj_orphan_title">Orphan Support</option>
+    <option value="winter" data-lang="proj_winter_title">Winter Aid</option>
+    <option value="disaster" data-lang="proj_disaster_title_2">Disaster Relief</option>
+    <option value="mosque" data-lang="proj_mosque_title">Mosque Support</option>
+    <option value="tubewell" data-lang="proj_tubewell_title">Tube Well</option>
+    <option value="housing" data-lang="proj_housing_title">Housing Support</option>
+</select>
 
                         <h5 class="fw-bold theme-text mb-3" data-lang="don_personal_info">Personal Information</h5>
                         <div class="row g-3 mb-4">
@@ -217,11 +219,7 @@
                         <img src="asstes/image/logom.png" alt="Logo"
                             style="height: 55px; width: auto; object-fit: contain; margin-right: 12px;">
                         <div class="d-flex flex-column justify-content-center">
-                            <span class="text-white fw-bold"
-                                style="font-size: 1.3rem; letter-spacing: 1px; font-family: var(--font-heading); line-height: 1;">M.R
-                                WELFARE</span>
-                            <span
-                                style="color: var(--accent-red); font-size: 0.8rem; font-weight: 700; letter-spacing: 3.5px; font-family: var(--font-heading); line-height: 1; margin-top: 4px;">FOUNDATION</span>
+                            
                         </div>
                     </a>
 
